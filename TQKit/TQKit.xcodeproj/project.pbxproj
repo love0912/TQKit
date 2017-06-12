@@ -28,9 +28,9 @@
 		1155BF531EEE4905007B09BF /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF3A1EEE4905007B09BF /* YYKVStorage.m */; };
 		1155BF541EEE4905007B09BF /* YYMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF3B1EEE4905007B09BF /* YYMemoryCache.h */; };
 		1155BF551EEE4905007B09BF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF3C1EEE4905007B09BF /* YYMemoryCache.m */; };
-		1155BF561EEE4905007B09BF /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF3E1EEE4905007B09BF /* YYCategoriesMacro.h */; };
 		1155BF571EEE4905007B09BF /* YYCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF3F1EEE4905007B09BF /* YYCGUtilities.h */; };
 		1155BF581EEE4905007B09BF /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF401EEE4905007B09BF /* YYCGUtilities.m */; };
+		1155BF5B1EEE7F2A007B09BF /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */; };
 		118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A68241EE7838300DFCC13 /* NSData+TTExt.h */; };
 		118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A68251EE7838300DFCC13 /* NSData+TTExt.m */; };
 		118A68291EE7861A00DFCC13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A68281EE7861A00DFCC13 /* libz.tbd */; };
@@ -169,9 +169,9 @@
 		1155BF3A1EEE4905007B09BF /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
 		1155BF3B1EEE4905007B09BF /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
 		1155BF3C1EEE4905007B09BF /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
-		1155BF3E1EEE4905007B09BF /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
 		1155BF3F1EEE4905007B09BF /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
 		1155BF401EEE4905007B09BF /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
+		1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
 		118A68241EE7838300DFCC13 /* NSData+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TTExt.h"; sourceTree = "<group>"; };
 		118A68251EE7838300DFCC13 /* NSData+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+TTExt.m"; sourceTree = "<group>"; };
 		118A68281EE7861A00DFCC13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -352,7 +352,6 @@
 		1155BF3D1EEE4905007B09BF /* YYUtils */ = {
 			isa = PBXGroup;
 			children = (
-				1155BF3E1EEE4905007B09BF /* YYCategoriesMacro.h */,
 				1155BF3F1EEE4905007B09BF /* YYCGUtilities.h */,
 				1155BF401EEE4905007B09BF /* YYCGUtilities.m */,
 			);
@@ -402,6 +401,7 @@
 		11B3DF961ED41875007050B3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */,
 				11B3DF971ED41875007050B3 /* Foundation */,
 				11B3DFB41ED41875007050B3 /* Quartz */,
 				11B3DFB71ED41875007050B3 /* TT_CategoryHeader.h */,
@@ -908,6 +908,7 @@
 				11B3E0701ED41875007050B3 /* UIDevice+TTExt.h in Headers */,
 				11B3E0661ED41875007050B3 /* UIButton+TTExt.h in Headers */,
 				11B3E0841ED41875007050B3 /* UITextField+TTExt.h in Headers */,
+				1155BF5B1EEE7F2A007B09BF /* YYCategoriesMacro.h in Headers */,
 				11B3E05F1ED41875007050B3 /* TT_UIKitHeader.h in Headers */,
 				11B3E05E1ED41875007050B3 /* TT_CategoryHeader.h in Headers */,
 				1155BF461EEE4905007B09BF /* AFSecurityPolicy.h in Headers */,
@@ -938,7 +939,6 @@
 				11B3E0A61ED41875007050B3 /* SVProgressHUD.h in Headers */,
 				11B3E0A31ED41875007050B3 /* SVProgressAnimatedView.h in Headers */,
 				11B3E0471ED41875007050B3 /* NSDate+TTExt.h in Headers */,
-				1155BF561EEE4905007B09BF /* YYCategoriesMacro.h in Headers */,
 				11B3E09B1ED41875007050B3 /* TT_Define_Singleton.h in Headers */,
 				1155BF431EEE4905007B09BF /* AFNetworking.h in Headers */,
 				11B3E0961ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h in Headers */,
