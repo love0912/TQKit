@@ -1,0 +1,74 @@
+//
+//  UserInfoUtil.m
+//  JKCommunity
+//
+//  Created by 郭界 on 2017/3/6.
+//  Copyright © 2017年 ythd. All rights reserved.
+//
+
+#import "UserInfoUtil.h"
+
+@implementation UserInfoUtil
+
++ (NSMutableDictionary *)getKeychainQuery:(NSString *)service {
+    return [NSMutableDictionary dictionaryWithObjectsAndKeys:
+            (id)kSecClassGenericPassword,(id)kSecClass,
+            service, (id)kSecAttrService,
+            service, (id)kSecAttrAccount,
+            (id)kSecAttrAccessibleAfterFirstUnlock,(id)kSecAttrAccessible,
+            nil];
+}
+
+/**
+ 存储用户密码到keyChain
+ 
+ @param password 用户密码
+ @param userId 对应服务器唯一的userid
+ */
++ (void)setPassword:(NSString *)password forKeyChainUserID:(NSString *)userId {
+    NSMutableDictionary *keychainQuery = [self getKeychainQuery:userId];
+    //Delete old item before add new item
+    SecItemDelete((CFDictionaryRef)keychainQuery);
+    //Add new object to search dictionary(Attention:the data format)
+    [keychainQuery setObject:[NSKeyedArchiver archivedDataWithRootObject:password] forKey:(id)kSecValueData];
+    //Add item to keychain with the search dictionary
+    SecItemAdd((CFDictionaryRef)keychainQuery, NULL);
+}
+
+/**
+ 从Keychain中取保存的密码
+ 
+ @param userId 用户唯一的ID
+ @return 返回用户密码
+ */
++ (NSString *)getPasswordForKeychainUserId:(NSString *)userId {
+    NSString *ret = nil;
+    NSMutableDictionary *keychainQuery = [self getKeychainQuery:userId];
+    [keychainQuery setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
+    [keychainQuery setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
+    CFDataRef keyData = NULL;
+    if (SecItemCopyMatching((CFDictionaryRef)keychainQuery, (CFTypeRef *)&keyData) == noErr) {
+        @try {
+            ret = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
+        } @catch (NSException *e) {
+            NSLog(@"Unarchive of %@ failed: %@", userId, e);
+        } @finally {
+        }
+    }
+    if (keyData)
+        CFRelease(keyData);
+    return ret;
+}
+
+/**
+ 通过ID删除keyChain中保存的对象
+ 
+ @param ID keyChain中保存的ID
+ */
++ (void)deleteObjForKeyChainByID:(NSString *)ID {
+    NSMutableDictionary *keychainQuery = [self getKeychainQuery:ID];
+    SecItemDelete((CFDictionaryRef)keychainQuery);
+}
+
+
+@end
