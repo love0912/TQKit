@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "TTAPIClient.h"
-#import "TT_Define_Singleton.h"
-
 
 #define APIReturnCode @""
 #define APIReturnData @""

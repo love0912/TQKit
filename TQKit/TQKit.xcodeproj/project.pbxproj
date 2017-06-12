@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1155BF411EEE4905007B09BF /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF271EEE4905007B09BF /* AFHTTPSessionManager.h */; };
+		1155BF421EEE4905007B09BF /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF281EEE4905007B09BF /* AFHTTPSessionManager.m */; };
+		1155BF431EEE4905007B09BF /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF291EEE4905007B09BF /* AFNetworking.h */; };
+		1155BF441EEE4905007B09BF /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF2A1EEE4905007B09BF /* AFNetworkReachabilityManager.h */; };
+		1155BF451EEE4905007B09BF /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF2B1EEE4905007B09BF /* AFNetworkReachabilityManager.m */; };
+		1155BF461EEE4905007B09BF /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF2C1EEE4905007B09BF /* AFSecurityPolicy.h */; };
+		1155BF471EEE4905007B09BF /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF2D1EEE4905007B09BF /* AFSecurityPolicy.m */; };
+		1155BF481EEE4905007B09BF /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF2E1EEE4905007B09BF /* AFURLRequestSerialization.h */; };
+		1155BF491EEE4905007B09BF /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF2F1EEE4905007B09BF /* AFURLRequestSerialization.m */; };
+		1155BF4A1EEE4905007B09BF /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF301EEE4905007B09BF /* AFURLResponseSerialization.h */; };
+		1155BF4B1EEE4905007B09BF /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF311EEE4905007B09BF /* AFURLResponseSerialization.m */; };
+		1155BF4C1EEE4905007B09BF /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF321EEE4905007B09BF /* AFURLSessionManager.h */; };
+		1155BF4D1EEE4905007B09BF /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF331EEE4905007B09BF /* AFURLSessionManager.m */; };
+		1155BF4E1EEE4905007B09BF /* YYCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF351EEE4905007B09BF /* YYCache.h */; };
+		1155BF4F1EEE4905007B09BF /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF361EEE4905007B09BF /* YYCache.m */; };
+		1155BF501EEE4905007B09BF /* YYDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF371EEE4905007B09BF /* YYDiskCache.h */; };
+		1155BF511EEE4905007B09BF /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF381EEE4905007B09BF /* YYDiskCache.m */; };
+		1155BF521EEE4905007B09BF /* YYKVStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF391EEE4905007B09BF /* YYKVStorage.h */; };
+		1155BF531EEE4905007B09BF /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF3A1EEE4905007B09BF /* YYKVStorage.m */; };
+		1155BF541EEE4905007B09BF /* YYMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF3B1EEE4905007B09BF /* YYMemoryCache.h */; };
+		1155BF551EEE4905007B09BF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF3C1EEE4905007B09BF /* YYMemoryCache.m */; };
+		1155BF561EEE4905007B09BF /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF3E1EEE4905007B09BF /* YYCategoriesMacro.h */; };
+		1155BF571EEE4905007B09BF /* YYCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF3F1EEE4905007B09BF /* YYCGUtilities.h */; };
+		1155BF581EEE4905007B09BF /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF401EEE4905007B09BF /* YYCGUtilities.m */; };
 		118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A68241EE7838300DFCC13 /* NSData+TTExt.h */; };
 		118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A68251EE7838300DFCC13 /* NSData+TTExt.m */; };
 		118A68291EE7861A00DFCC13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A68281EE7861A00DFCC13 /* libz.tbd */; };
 		118A682C1EE7868600DFCC13 /* NSString+TTExt2Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A682A1EE7868600DFCC13 /* NSString+TTExt2Hash.h */; };
 		118A682D1EE7868600DFCC13 /* NSString+TTExt2Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A682B1EE7868600DFCC13 /* NSString+TTExt2Hash.m */; };
 		11B3DF731ED41827007050B3 /* TQKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF711ED41827007050B3 /* TQKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11B3E02F1ED41875007050B3 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF7B1ED41875007050B3 /* AFHTTPSessionManager.h */; };
-		11B3E0301ED41875007050B3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF7C1ED41875007050B3 /* AFHTTPSessionManager.m */; };
-		11B3E0311ED41875007050B3 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF7D1ED41875007050B3 /* AFNetworking.h */; };
-		11B3E0321ED41875007050B3 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF7E1ED41875007050B3 /* AFNetworkReachabilityManager.h */; };
-		11B3E0331ED41875007050B3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF7F1ED41875007050B3 /* AFNetworkReachabilityManager.m */; };
-		11B3E0341ED41875007050B3 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF801ED41875007050B3 /* AFSecurityPolicy.h */; };
-		11B3E0351ED41875007050B3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF811ED41875007050B3 /* AFSecurityPolicy.m */; };
-		11B3E0361ED41875007050B3 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF821ED41875007050B3 /* AFURLRequestSerialization.h */; };
-		11B3E0371ED41875007050B3 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF831ED41875007050B3 /* AFURLRequestSerialization.m */; };
-		11B3E0381ED41875007050B3 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF841ED41875007050B3 /* AFURLResponseSerialization.h */; };
-		11B3E0391ED41875007050B3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF851ED41875007050B3 /* AFURLResponseSerialization.m */; };
-		11B3E03A1ED41875007050B3 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF861ED41875007050B3 /* AFURLSessionManager.h */; };
-		11B3E03B1ED41875007050B3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF871ED41875007050B3 /* AFURLSessionManager.m */; };
-		11B3E03C1ED41875007050B3 /* YYCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF8A1ED41875007050B3 /* YYCache.h */; };
-		11B3E03D1ED41875007050B3 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF8B1ED41875007050B3 /* YYCache.m */; };
-		11B3E03E1ED41875007050B3 /* YYDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF8C1ED41875007050B3 /* YYDiskCache.h */; };
-		11B3E03F1ED41875007050B3 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF8D1ED41875007050B3 /* YYDiskCache.m */; };
-		11B3E0401ED41875007050B3 /* YYKVStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF8E1ED41875007050B3 /* YYKVStorage.h */; };
-		11B3E0411ED41875007050B3 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF8F1ED41875007050B3 /* YYKVStorage.m */; };
-		11B3E0421ED41875007050B3 /* YYMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF901ED41875007050B3 /* YYMemoryCache.h */; };
-		11B3E0431ED41875007050B3 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF911ED41875007050B3 /* YYMemoryCache.m */; };
-		11B3E0441ED41875007050B3 /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF931ED41875007050B3 /* YYCategoriesMacro.h */; };
-		11B3E0451ED41875007050B3 /* YYCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF941ED41875007050B3 /* YYCGUtilities.h */; };
-		11B3E0461ED41875007050B3 /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF951ED41875007050B3 /* YYCGUtilities.m */; };
 		11B3E0471ED41875007050B3 /* NSDate+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF991ED41875007050B3 /* NSDate+TTExt.h */; };
 		11B3E0481ED41875007050B3 /* NSDate+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF9A1ED41875007050B3 /* NSDate+TTExt.m */; };
 		11B3E0491ED41875007050B3 /* NSDate+TTExt2Format.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF9B1ED41875007050B3 /* NSDate+TTExt2Format.h */; };
@@ -148,6 +148,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1155BF271EEE4905007B09BF /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		1155BF281EEE4905007B09BF /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		1155BF291EEE4905007B09BF /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		1155BF2A1EEE4905007B09BF /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		1155BF2B1EEE4905007B09BF /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		1155BF2C1EEE4905007B09BF /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		1155BF2D1EEE4905007B09BF /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		1155BF2E1EEE4905007B09BF /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		1155BF2F1EEE4905007B09BF /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		1155BF301EEE4905007B09BF /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		1155BF311EEE4905007B09BF /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		1155BF321EEE4905007B09BF /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		1155BF331EEE4905007B09BF /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		1155BF351EEE4905007B09BF /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		1155BF361EEE4905007B09BF /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		1155BF371EEE4905007B09BF /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		1155BF381EEE4905007B09BF /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		1155BF391EEE4905007B09BF /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		1155BF3A1EEE4905007B09BF /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		1155BF3B1EEE4905007B09BF /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		1155BF3C1EEE4905007B09BF /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		1155BF3E1EEE4905007B09BF /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
+		1155BF3F1EEE4905007B09BF /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
+		1155BF401EEE4905007B09BF /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
 		118A68241EE7838300DFCC13 /* NSData+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TTExt.h"; sourceTree = "<group>"; };
 		118A68251EE7838300DFCC13 /* NSData+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+TTExt.m"; sourceTree = "<group>"; };
 		118A68281EE7861A00DFCC13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -156,30 +180,6 @@
 		11B3DF6E1ED41827007050B3 /* TQKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TQKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B3DF711ED41827007050B3 /* TQKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQKit.h; sourceTree = "<group>"; };
 		11B3DF721ED41827007050B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11B3DF7B1ED41875007050B3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		11B3DF7C1ED41875007050B3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		11B3DF7D1ED41875007050B3 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		11B3DF7E1ED41875007050B3 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		11B3DF7F1ED41875007050B3 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		11B3DF801ED41875007050B3 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		11B3DF811ED41875007050B3 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		11B3DF821ED41875007050B3 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		11B3DF831ED41875007050B3 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		11B3DF841ED41875007050B3 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		11B3DF851ED41875007050B3 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		11B3DF861ED41875007050B3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		11B3DF871ED41875007050B3 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		11B3DF8A1ED41875007050B3 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
-		11B3DF8B1ED41875007050B3 /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
-		11B3DF8C1ED41875007050B3 /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
-		11B3DF8D1ED41875007050B3 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
-		11B3DF8E1ED41875007050B3 /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
-		11B3DF8F1ED41875007050B3 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
-		11B3DF901ED41875007050B3 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
-		11B3DF911ED41875007050B3 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
-		11B3DF931ED41875007050B3 /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
-		11B3DF941ED41875007050B3 /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
-		11B3DF951ED41875007050B3 /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
 		11B3DF991ED41875007050B3 /* NSDate+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TTExt.h"; sourceTree = "<group>"; };
 		11B3DF9A1ED41875007050B3 /* NSDate+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TTExt.m"; sourceTree = "<group>"; };
 		11B3DF9B1ED41875007050B3 /* NSDate+TTExt2Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TTExt2Format.h"; sourceTree = "<group>"; };
@@ -303,6 +303,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1155BF251EEE4905007B09BF /* 3rdLib */ = {
+			isa = PBXGroup;
+			children = (
+				1155BF261EEE4905007B09BF /* AFNetworking */,
+				1155BF341EEE4905007B09BF /* YYCache */,
+				1155BF3D1EEE4905007B09BF /* YYUtils */,
+			);
+			path = 3rdLib;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		1155BF261EEE4905007B09BF /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1155BF271EEE4905007B09BF /* AFHTTPSessionManager.h */,
+				1155BF281EEE4905007B09BF /* AFHTTPSessionManager.m */,
+				1155BF291EEE4905007B09BF /* AFNetworking.h */,
+				1155BF2A1EEE4905007B09BF /* AFNetworkReachabilityManager.h */,
+				1155BF2B1EEE4905007B09BF /* AFNetworkReachabilityManager.m */,
+				1155BF2C1EEE4905007B09BF /* AFSecurityPolicy.h */,
+				1155BF2D1EEE4905007B09BF /* AFSecurityPolicy.m */,
+				1155BF2E1EEE4905007B09BF /* AFURLRequestSerialization.h */,
+				1155BF2F1EEE4905007B09BF /* AFURLRequestSerialization.m */,
+				1155BF301EEE4905007B09BF /* AFURLResponseSerialization.h */,
+				1155BF311EEE4905007B09BF /* AFURLResponseSerialization.m */,
+				1155BF321EEE4905007B09BF /* AFURLSessionManager.h */,
+				1155BF331EEE4905007B09BF /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		1155BF341EEE4905007B09BF /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				1155BF351EEE4905007B09BF /* YYCache.h */,
+				1155BF361EEE4905007B09BF /* YYCache.m */,
+				1155BF371EEE4905007B09BF /* YYDiskCache.h */,
+				1155BF381EEE4905007B09BF /* YYDiskCache.m */,
+				1155BF391EEE4905007B09BF /* YYKVStorage.h */,
+				1155BF3A1EEE4905007B09BF /* YYKVStorage.m */,
+				1155BF3B1EEE4905007B09BF /* YYMemoryCache.h */,
+				1155BF3C1EEE4905007B09BF /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
+		1155BF3D1EEE4905007B09BF /* YYUtils */ = {
+			isa = PBXGroup;
+			children = (
+				1155BF3E1EEE4905007B09BF /* YYCategoriesMacro.h */,
+				1155BF3F1EEE4905007B09BF /* YYCGUtilities.h */,
+				1155BF401EEE4905007B09BF /* YYCGUtilities.m */,
+			);
+			path = YYUtils;
+			sourceTree = "<group>";
+		};
 		118A68231EE7836C00DFCC13 /* NSData */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,7 +388,7 @@
 		11B3DF701ED41827007050B3 /* TQKit */ = {
 			isa = PBXGroup;
 			children = (
-				11B3DF791ED41875007050B3 /* 3rdLib */,
+				1155BF251EEE4905007B09BF /* 3rdLib */,
 				11B3DF961ED41875007050B3 /* Category */,
 				11B3DFF61ED41875007050B3 /* Core */,
 				11B3E00C1ED41875007050B3 /* Macros */,
@@ -341,69 +397,6 @@
 				11B3DF721ED41827007050B3 /* Info.plist */,
 			);
 			path = TQKit;
-			sourceTree = "<group>";
-		};
-		11B3DF791ED41875007050B3 /* 3rdLib */ = {
-			isa = PBXGroup;
-			children = (
-				11B3DF7A1ED41875007050B3 /* AFNetworking */,
-				11B3DF881ED41875007050B3 /* SQLite */,
-				11B3DF891ED41875007050B3 /* YYCache */,
-				11B3DF921ED41875007050B3 /* YYUtils */,
-			);
-			path = 3rdLib;
-			sourceTree = "<group>";
-		};
-		11B3DF7A1ED41875007050B3 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				11B3DF7B1ED41875007050B3 /* AFHTTPSessionManager.h */,
-				11B3DF7C1ED41875007050B3 /* AFHTTPSessionManager.m */,
-				11B3DF7D1ED41875007050B3 /* AFNetworking.h */,
-				11B3DF7E1ED41875007050B3 /* AFNetworkReachabilityManager.h */,
-				11B3DF7F1ED41875007050B3 /* AFNetworkReachabilityManager.m */,
-				11B3DF801ED41875007050B3 /* AFSecurityPolicy.h */,
-				11B3DF811ED41875007050B3 /* AFSecurityPolicy.m */,
-				11B3DF821ED41875007050B3 /* AFURLRequestSerialization.h */,
-				11B3DF831ED41875007050B3 /* AFURLRequestSerialization.m */,
-				11B3DF841ED41875007050B3 /* AFURLResponseSerialization.h */,
-				11B3DF851ED41875007050B3 /* AFURLResponseSerialization.m */,
-				11B3DF861ED41875007050B3 /* AFURLSessionManager.h */,
-				11B3DF871ED41875007050B3 /* AFURLSessionManager.m */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		11B3DF881ED41875007050B3 /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SQLite;
-			sourceTree = "<group>";
-		};
-		11B3DF891ED41875007050B3 /* YYCache */ = {
-			isa = PBXGroup;
-			children = (
-				11B3DF8A1ED41875007050B3 /* YYCache.h */,
-				11B3DF8B1ED41875007050B3 /* YYCache.m */,
-				11B3DF8C1ED41875007050B3 /* YYDiskCache.h */,
-				11B3DF8D1ED41875007050B3 /* YYDiskCache.m */,
-				11B3DF8E1ED41875007050B3 /* YYKVStorage.h */,
-				11B3DF8F1ED41875007050B3 /* YYKVStorage.m */,
-				11B3DF901ED41875007050B3 /* YYMemoryCache.h */,
-				11B3DF911ED41875007050B3 /* YYMemoryCache.m */,
-			);
-			path = YYCache;
-			sourceTree = "<group>";
-		};
-		11B3DF921ED41875007050B3 /* YYUtils */ = {
-			isa = PBXGroup;
-			children = (
-				11B3DF931ED41875007050B3 /* YYCategoriesMacro.h */,
-				11B3DF941ED41875007050B3 /* YYCGUtilities.h */,
-				11B3DF951ED41875007050B3 /* YYCGUtilities.m */,
-			);
-			path = YYUtils;
 			sourceTree = "<group>";
 		};
 		11B3DF961ED41875007050B3 /* Category */ = {
@@ -896,11 +889,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B3E0361ED41875007050B3 /* AFURLRequestSerialization.h in Headers */,
+				1155BF4C1EEE4905007B09BF /* AFURLSessionManager.h in Headers */,
 				11B3E07C1ED41875007050B3 /* UINavigationBar+TTExt2BGColor.h in Headers */,
+				1155BF4E1EEE4905007B09BF /* YYCache.h in Headers */,
 				11B3E09C1ED41875007050B3 /* AppInfoUtil.h in Headers */,
+				1155BF411EEE4905007B09BF /* AFHTTPSessionManager.h in Headers */,
 				11B3E0551ED41875007050B3 /* NSString+TTExt2Frame.h in Headers */,
-				11B3E0451ED41875007050B3 /* YYCGUtilities.h in Headers */,
+				1155BF521EEE4905007B09BF /* YYKVStorage.h in Headers */,
 				11B3E0881ED41875007050B3 /* UIView+TTExt.h in Headers */,
 				11B3E0721ED41875007050B3 /* UIFont+TTExt.h in Headers */,
 				11B3E0741ED41875007050B3 /* UIGestureRecognizer+TTExt.h in Headers */,
@@ -915,57 +910,55 @@
 				11B3E0841ED41875007050B3 /* UITextField+TTExt.h in Headers */,
 				11B3E05F1ED41875007050B3 /* TT_UIKitHeader.h in Headers */,
 				11B3E05E1ED41875007050B3 /* TT_CategoryHeader.h in Headers */,
+				1155BF461EEE4905007B09BF /* AFSecurityPolicy.h in Headers */,
 				11B3E0901ED41875007050B3 /* BaseService.h in Headers */,
-				11B3E02F1ED41875007050B3 /* AFHTTPSessionManager.h in Headers */,
 				11B3E0681ED41875007050B3 /* UIButton+TTExt2CountDown.h in Headers */,
-				11B3E03E1ED41875007050B3 /* YYDiskCache.h in Headers */,
 				11B3E08C1ED41875007050B3 /* TTAPIClient.h in Headers */,
+				1155BF501EEE4905007B09BF /* YYDiskCache.h in Headers */,
 				11B3E0A11ED41875007050B3 /* SVIndefiniteAnimatedView.h in Headers */,
 				11B3E0531ED41875007050B3 /* NSString+TTExt.h in Headers */,
+				1155BF4A1EEE4905007B09BF /* AFURLResponseSerialization.h in Headers */,
 				11B3E0981ED41875007050B3 /* UIViewController+TTExt2NavigationBar.h in Headers */,
 				11B3E0601ED41875007050B3 /* UIApplication+TTExt.h in Headers */,
 				11B3E07A1ED41875007050B3 /* UIImageView+TTExt.h in Headers */,
 				11B3E08E1ED41875007050B3 /* TTHttpAction.h in Headers */,
-				11B3E0341ED41875007050B3 /* AFSecurityPolicy.h in Headers */,
 				11B3E0801ED41875007050B3 /* UIScrollView+TTExt.h in Headers */,
 				11B3E05C1ED41875007050B3 /* CALayer+TTExt.h in Headers */,
 				11B3E0B01ED41875007050B3 /* UserInfoUtil.h in Headers */,
 				11B3E0591ED41875007050B3 /* NSUserDefaults+TTExt.h in Headers */,
-				11B3E0421ED41875007050B3 /* YYMemoryCache.h in Headers */,
-				11B3E0321ED41875007050B3 /* AFNetworkReachabilityManager.h in Headers */,
 				118A682C1EE7868600DFCC13 /* NSString+TTExt2Hash.h in Headers */,
 				11B3E0861ED41875007050B3 /* UITextView+TTExt.h in Headers */,
-				11B3E03A1ED41875007050B3 /* AFURLSessionManager.h in Headers */,
 				11B3E08A1ED41875007050B3 /* Reachability.h in Headers */,
 				11B3E06E1ED41875007050B3 /* UIControl+TTExt.h in Headers */,
 				11B3E06A1ED41875007050B3 /* UIButton+TTExt2ImagePosition.h in Headers */,
 				11B3E0AA1ED41875007050B3 /* TTProgressHUD.h in Headers */,
-				11B3E03C1ED41875007050B3 /* YYCache.h in Headers */,
 				118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */,
 				11B3E0491ED41875007050B3 /* NSDate+TTExt2Format.h in Headers */,
 				11B3E0641ED41875007050B3 /* UIBezierPath+TTExt.h in Headers */,
 				11B3E0A61ED41875007050B3 /* SVProgressHUD.h in Headers */,
 				11B3E0A31ED41875007050B3 /* SVProgressAnimatedView.h in Headers */,
 				11B3E0471ED41875007050B3 /* NSDate+TTExt.h in Headers */,
+				1155BF561EEE4905007B09BF /* YYCategoriesMacro.h in Headers */,
 				11B3E09B1ED41875007050B3 /* TT_Define_Singleton.h in Headers */,
+				1155BF431EEE4905007B09BF /* AFNetworking.h in Headers */,
 				11B3E0961ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h in Headers */,
 				11B3E0921ED41875007050B3 /* TTMediator.h in Headers */,
 				11B3E04F1ED41875007050B3 /* NSNumber+TTExt.h in Headers */,
 				11B3E0571ED41875007050B3 /* NSTimer+TTExt.h in Headers */,
+				1155BF481EEE4905007B09BF /* AFURLRequestSerialization.h in Headers */,
 				11B3E0621ED41875007050B3 /* UIBarButtonItem+TTExt.h in Headers */,
 				11B3E09A1ED41875007050B3 /* TT_Define_App.h in Headers */,
-				11B3E0381ED41875007050B3 /* AFURLResponseSerialization.h in Headers */,
-				11B3E0401ED41875007050B3 /* YYKVStorage.h in Headers */,
+				1155BF541EEE4905007B09BF /* YYMemoryCache.h in Headers */,
 				11B3E04B1ED41875007050B3 /* NSDictionary+TTExt.h in Headers */,
 				11B3E04D1ED41875007050B3 /* NSDictionary+TTExt2UrlParam.h in Headers */,
+				1155BF441EEE4905007B09BF /* AFNetworkReachabilityManager.h in Headers */,
 				11B3E0781ED41875007050B3 /* UIImage+TTExt2Effect.h in Headers */,
 				11B3E0761ED41875007050B3 /* UIImage+TTExt.h in Headers */,
 				11B3E06C1ED41875007050B3 /* UIColor+TTExt.h in Headers */,
 				11B3E09E1ED41875007050B3 /* TT_Utils_Header.h in Headers */,
 				11B3E0941ED41875007050B3 /* UIViewController+TTExt2Parameter.h in Headers */,
 				11B3DF731ED41827007050B3 /* TQKit.h in Headers */,
-				11B3E0311ED41875007050B3 /* AFNetworking.h in Headers */,
-				11B3E0441ED41875007050B3 /* YYCategoriesMacro.h in Headers */,
+				1155BF571EEE4905007B09BF /* YYCGUtilities.h in Headers */,
 				11B3E0A81ED41875007050B3 /* SVRadialGradientLayer.h in Headers */,
 				11B3E05B1ED41875007050B3 /* TT_FoundationHeader.h in Headers */,
 			);
@@ -1046,6 +1039,7 @@
 				11B3E0651ED41875007050B3 /* UIBezierPath+TTExt.m in Sources */,
 				11B3E0811ED41875007050B3 /* UIScrollView+TTExt.m in Sources */,
 				11B3E0831ED41875007050B3 /* UITableView+TTExt.m in Sources */,
+				1155BF4D1EEE4905007B09BF /* AFURLSessionManager.m in Sources */,
 				11B3E0991ED41875007050B3 /* UIViewController+TTExt2NavigationBar.m in Sources */,
 				11B3E0931ED41875007050B3 /* TTMediator.m in Sources */,
 				11B3E06B1ED41875007050B3 /* UIButton+TTExt2ImagePosition.m in Sources */,
@@ -1053,10 +1047,11 @@
 				11B3E0611ED41875007050B3 /* UIApplication+TTExt.m in Sources */,
 				11B3E0A01ED41875007050B3 /* TTAlertUtil.m in Sources */,
 				11B3E04C1ED41875007050B3 /* NSDictionary+TTExt.m in Sources */,
+				1155BF4F1EEE4905007B09BF /* YYCache.m in Sources */,
 				11B3E0671ED41875007050B3 /* UIButton+TTExt.m in Sources */,
+				1155BF551EEE4905007B09BF /* YYMemoryCache.m in Sources */,
 				11B3E0AF1ED41875007050B3 /* TTDataSource.m in Sources */,
 				11B3E07B1ED41875007050B3 /* UIImageView+TTExt.m in Sources */,
-				11B3E0331ED41875007050B3 /* AFNetworkReachabilityManager.m in Sources */,
 				11B3E0521ED41875007050B3 /* NSObject+TTExt.m in Sources */,
 				11B3E0851ED41875007050B3 /* UITextField+TTExt.m in Sources */,
 				11B3E09D1ED41875007050B3 /* AppInfoUtil.m in Sources */,
@@ -1064,20 +1059,17 @@
 				11B3E0A71ED41875007050B3 /* SVProgressHUD.m in Sources */,
 				11B3E0691ED41875007050B3 /* UIButton+TTExt2CountDown.m in Sources */,
 				11B3E08B1ED41875007050B3 /* Reachability.m in Sources */,
-				11B3E03F1ED41875007050B3 /* YYDiskCache.m in Sources */,
 				11B3E06F1ED41875007050B3 /* UIControl+TTExt.m in Sources */,
 				11B3E07F1ED41875007050B3 /* UINavigationController+TTExt.m in Sources */,
-				11B3E0351ED41875007050B3 /* AFSecurityPolicy.m in Sources */,
 				11B3E0791ED41875007050B3 /* UIImage+TTExt2Effect.m in Sources */,
-				11B3E0431ED41875007050B3 /* YYMemoryCache.m in Sources */,
 				11B3E08F1ED41875007050B3 /* TTHttpAction.m in Sources */,
 				11B3E06D1ED41875007050B3 /* UIColor+TTExt.m in Sources */,
 				11B3E0971ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.m in Sources */,
+				1155BF4B1EEE4905007B09BF /* AFURLResponseSerialization.m in Sources */,
 				11B3E0951ED41875007050B3 /* UIViewController+TTExt2Parameter.m in Sources */,
 				11B3E0481ED41875007050B3 /* NSDate+TTExt.m in Sources */,
-				11B3E0411ED41875007050B3 /* YYKVStorage.m in Sources */,
-				11B3E0301ED41875007050B3 /* AFHTTPSessionManager.m in Sources */,
 				11B3E05D1ED41875007050B3 /* CALayer+TTExt.m in Sources */,
+				1155BF471EEE4905007B09BF /* AFSecurityPolicy.m in Sources */,
 				118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */,
 				11B3E0541ED41875007050B3 /* NSString+TTExt.m in Sources */,
 				11B3E0751ED41875007050B3 /* UIGestureRecognizer+TTExt.m in Sources */,
@@ -1087,23 +1079,24 @@
 				11B3E0561ED41875007050B3 /* NSString+TTExt2Frame.m in Sources */,
 				11B3E04E1ED41875007050B3 /* NSDictionary+TTExt2UrlParam.m in Sources */,
 				11B3E0AD1ED41875007050B3 /* TTQRCodeUtil.m in Sources */,
+				1155BF421EEE4905007B09BF /* AFHTTPSessionManager.m in Sources */,
 				11B3E08D1ED41875007050B3 /* TTAPIClient.m in Sources */,
 				11B3E0501ED41875007050B3 /* NSNumber+TTExt.m in Sources */,
 				11B3E0771ED41875007050B3 /* UIImage+TTExt.m in Sources */,
 				11B3E04A1ED41875007050B3 /* NSDate+TTExt2Format.m in Sources */,
 				11B3E0891ED41875007050B3 /* UIView+TTExt.m in Sources */,
-				11B3E03B1ED41875007050B3 /* AFURLSessionManager.m in Sources */,
+				1155BF491EEE4905007B09BF /* AFURLRequestSerialization.m in Sources */,
+				1155BF451EEE4905007B09BF /* AFNetworkReachabilityManager.m in Sources */,
 				11B3E0A41ED41875007050B3 /* SVProgressAnimatedView.m in Sources */,
-				11B3E0461ED41875007050B3 /* YYCGUtilities.m in Sources */,
 				11B3E0A91ED41875007050B3 /* SVRadialGradientLayer.m in Sources */,
 				11B3E0A21ED41875007050B3 /* SVIndefiniteAnimatedView.m in Sources */,
 				11B3E0911ED41875007050B3 /* BaseService.m in Sources */,
+				1155BF531EEE4905007B09BF /* YYKVStorage.m in Sources */,
 				11B3E0581ED41875007050B3 /* NSTimer+TTExt.m in Sources */,
-				11B3E0371ED41875007050B3 /* AFURLRequestSerialization.m in Sources */,
+				1155BF511EEE4905007B09BF /* YYDiskCache.m in Sources */,
+				1155BF581EEE4905007B09BF /* YYCGUtilities.m in Sources */,
 				11B3E0AB1ED41875007050B3 /* TTProgressHUD.m in Sources */,
 				11B3E05A1ED41875007050B3 /* NSUserDefaults+TTExt.m in Sources */,
-				11B3E0391ED41875007050B3 /* AFURLResponseSerialization.m in Sources */,
-				11B3E03D1ED41875007050B3 /* YYCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

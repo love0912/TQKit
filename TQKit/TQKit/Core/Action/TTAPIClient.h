@@ -8,6 +8,7 @@
 
 #import "AFHTTPSessionManager.h"
 #import "Reachability.h"
+@class AFHTTPSessionManager;
 
 @interface TTAPIClient : AFHTTPSessionManager
 
