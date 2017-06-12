@@ -776,8 +776,6 @@
 			isa = PBXGroup;
 			children = (
 				11B3E0101ED41875007050B3 /* AppInfoUtil */,
-				11B3E0131ED41875007050B3 /* JAlertHelper */,
-				11B3E0141ED41875007050B3 /* JQRCodeHelper */,
 				11B3E0151ED41875007050B3 /* TT_Utils_Header.h */,
 				11B3E0161ED41875007050B3 /* TTAlertUtil */,
 				11B3E0191ED41875007050B3 /* TTProgressHUD */,
@@ -795,20 +793,6 @@
 				11B3E0121ED41875007050B3 /* AppInfoUtil.m */,
 			);
 			path = AppInfoUtil;
-			sourceTree = "<group>";
-		};
-		11B3E0131ED41875007050B3 /* JAlertHelper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JAlertHelper;
-			sourceTree = "<group>";
-		};
-		11B3E0141ED41875007050B3 /* JQRCodeHelper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JQRCodeHelper;
 			sourceTree = "<group>";
 		};
 		11B3E0161ED41875007050B3 /* TTAlertUtil */ = {

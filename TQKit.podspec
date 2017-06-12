@@ -25,17 +25,26 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-s.subspec 'Category' do |ss|
-ss.source_files = 'TQKit/TQKit/Category/**/*.{h,m}'
-ss.public_header_files = 'TQKit/TQKit/Category/TT_CategoryHeader.h'
-ss.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore'
-ss.libraries   = 'sqlite3', 'z'
+s.subspec 'Utils' do |ss|
+ss.source_files = 'TQKit/TQKit/Utils'
 ss.dependency 'AFNetworking', '~> 3.1.0'
 end
 
+s.subspec 'Macros' do |ss|
+ss.source_files = 'TQKit/TQKit/Macros'
+ss.dependency 'TQKit/Utils'
+end
+
+s.subspec 'Category' do |ss|
+ss.source_files = 'TQKit/TQKit/Category', 'TQKit/TQKit/Category/**/*'
+ss.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore'
+ss.libraries   = 'sqlite3', 'z'
+ss.dependency 'TQKit/Macros'
+end
+
 s.subspec 'Core' do |ss|
-ss.source_files = 'TQKit/TQKit/Core/Action/**/*'
-ss.dependency 'Category'
+ss.source_files = 'TQKit/TQKit/Core', 'TQKit/TQKit/Core/**/*'
+ss.dependency 'TQKit/Category'
 end
 
 end

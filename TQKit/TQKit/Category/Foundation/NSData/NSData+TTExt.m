@@ -7,11 +7,8 @@
 //
 
 #import "NSData+TTExt.h"
-#import "YYCategoriesMacro.h"
 #include <CommonCrypto/CommonCrypto.h>
 #include <zlib.h>
-
-YYSYNTH_DUMMY_CLASS(NSData_TTExt)
 
 @implementation NSData (TTExt)
 
