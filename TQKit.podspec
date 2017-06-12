@@ -5,15 +5,13 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
 		TQKit DESC.
                    DESC
-  s.homepage     = "http://git.tq-service.com/jason/TQKit"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-  # s.license      = "MIT (LICENSE)"
+  s.homepage     = "https://github.com/love0912/TQKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "guojie" => "cqwan.gj@qq.com" }
   
   s.ios.deployment_target = "8.0"
   
-  s.source       = { :git => "http://git.tq-service.com/jason/TQKit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
