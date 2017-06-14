@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'TQKit/TQKit/Category/TT_CategoryHeader.h'
         ss.source_files = 'TQKit/TQKit/Category/*.h'
             ss.subspec 'Foundation' do |sss|
-            #sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
+            sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
 
             sss.subspec 'NSData' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSData/*'
@@ -50,14 +50,14 @@ Pod::Spec.new do |s|
             sss.subspec 'NSDictionary' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSDictionary/*'
             end
-            sss.subspec 'NSNumber' do |ssss|
-                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSNumber/*'
-            end
             sss.subspec 'NSObject' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSObject/*'
             end
             sss.subspec 'NSString' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSString/*'
+            end
+            sss.subspec 'NSNumber' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSNumber/*'
             end
             sss.subspec 'NSTimer' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSTimer/*'

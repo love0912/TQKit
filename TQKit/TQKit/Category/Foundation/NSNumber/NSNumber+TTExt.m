@@ -7,12 +7,11 @@
 //
 
 #import "NSNumber+TTExt.h"
-#import "NSString+TTExt.h"
 
 @implementation NSNumber (TTExt)
 
 + (NSNumber *)tt_numberWithString:(NSString *)string {
-    NSString *str = [[string tt_stringByTrimmingWhitespaceAndNewlines] lowercaseString];
+    NSString *str = [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] lowercaseString];
     if (!str || !str.length) {
         return nil;
     }
