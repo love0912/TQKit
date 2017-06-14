@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
   
   s.ios.deployment_target = "8.0"
   
-  s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "TQKit/TQKit/TQKit.h"
+  s.source_files  = "TQKit/TQKit/**/*"
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
