@@ -16,22 +16,41 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "TQKit/TQKit/TQKit.h"
+#s.source_files  = "TQKit/TQKit/TQKit.h"
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore'
   s.libraries   = 'sqlite3', 'z'
-  s.public_header_files = 'TQKit/TQKit/TQKit.h'
+#  s.public_header_files = 'TQKit/TQKit/TQKit.h'
 
   s.requires_arc = true
 
 
-s.subspec '3rdLib' do |ss|
-#ss.source_files = 'TQKit/TQKit/3rdLib'
-    ss.subspec 'AFNetworking' do |sss|
-    sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
+    s.subspec '3rdLib' do |ss|
+    #ss.source_files = 'TQKit/TQKit/3rdLib'
+        ss.subspec 'AFNetworking' do |sss|
+        sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
+        end
+
+        ss.subspec 'YYCache' do |sss1|
+        sss1.source_files = 'TQKit/TQKit/3rdLib/YYCache/*'
+        end
     end
-end
+
+    s.subspec 'Category' do |ss|
+    #ss.source_files = 'TQKit/TQKit/Category/*.h'
+        ss.subspec 'Foundation' do |sss|
+    #sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader'
+
+            sss.subspec 'NSData' do |ssss|
+            ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSData/*'
+            end
+
+
+        end
+
+    end
+
 
 end
