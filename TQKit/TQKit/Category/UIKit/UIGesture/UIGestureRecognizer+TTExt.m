@@ -7,7 +7,6 @@
 //
 
 #import "UIGestureRecognizer+TTExt.h"
-#import "YYCategoriesMacro.h"
 #import <objc/runtime.h>
 
 static const int block_key;

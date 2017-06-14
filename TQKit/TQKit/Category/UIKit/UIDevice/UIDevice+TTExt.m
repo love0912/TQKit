@@ -14,10 +14,7 @@
 #include <mach/mach.h>
 #include <arpa/inet.h>
 #include <ifaddrs.h>
-#import "YYCategoriesMacro.h"
 #import "NSString+TTExt.h"
-
-YYSYNTH_DUMMY_CLASS(UIDevice_TTExt)
 
 @implementation UIDevice (TTExt)
 + (double)systemVersion {

@@ -8,10 +8,7 @@
 
 #import "UIBarButtonItem+TTExt.h"
 
-#import "YYCategoriesMacro.h"
 #import <objc/runtime.h>
-
-YYSYNTH_DUMMY_CLASS(UIBarButtonItem_TTExt)
 
 static const int block_key;
 

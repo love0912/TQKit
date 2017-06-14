@@ -7,9 +7,6 @@
 //
 
 #import "UIFont+TTExt.h"
-#import "YYCategoriesMacro.h"
-
-YYSYNTH_DUMMY_CLASS(UIFont_TTExt)
 
 
 #pragma clang diagnostic push

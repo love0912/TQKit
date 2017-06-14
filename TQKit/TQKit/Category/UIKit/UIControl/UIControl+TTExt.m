@@ -8,9 +8,6 @@
 
 #import "UIControl+TTExt.h"
 #import <objc/runtime.h>
-#import "YYCategoriesMacro.h"
-
-YYSYNTH_DUMMY_CLASS(UIControl_TTExt)
 
 static const int block_key;
 
