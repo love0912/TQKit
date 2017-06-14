@@ -16,13 +16,12 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "TQKit/TQKit/**/*"
+#s.source_files  = "TQKit/TQKit/TQKit.h"
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore'
   s.libraries   = 'sqlite3', 'z'
-  s.public_header_files = 'TQKit/TQKit/**/*.h'
 
   s.requires_arc = true
 
@@ -37,15 +36,35 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Category' do |ss|
-        ss.public_header_files = 'TQKit/TQKit/Category/YYCategoriesMacro.h'
-        ss.source_files = 'TQKit/TQKit/Category/YYCategoriesMacro.h'
+        ss.public_header_files = 'TQKit/TQKit/Category/TT_CategoryHeader.h'
+        ss.source_files = 'TQKit/TQKit/Category/*.h'
             ss.subspec 'Foundation' do |sss|
             #sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
 
             sss.subspec 'NSData' do |ssss|
-            ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSData/*'
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSData/*'
             end
-
+            sss.subspec 'NSDate' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSDate/*'
+            end
+            sss.subspec 'NSDictionary' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSDictionary/*'
+            end
+            sss.subspec 'NSNumber' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSNumber/*'
+            end
+            sss.subspec 'NSObject' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSObject/*'
+            end
+            sss.subspec 'NSString' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSString/*'
+            end
+            sss.subspec 'NSTimer' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSTimer/*'
+            end
+            sss.subspec 'NSUserDefaults' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSUserDefaults/*'
+            end
         end
     end
 

@@ -9,7 +9,6 @@
 #import "NSString+TTExt2Hash.h"
 #import "NSData+TTExt.h"
 #import "NSNumber+TTExt.h"
-#import "UIDevice+TTExt.h"
 #import "YYCategoriesMacro.h"
 
 @implementation NSString (TTExt2Hash)
