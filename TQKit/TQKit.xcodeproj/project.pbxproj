@@ -400,12 +400,12 @@
 		11B3DF961ED41875007050B3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				1155BF5C1EEE893F007B09BF /* YYUtils */,
 				1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */,
+				11B3DFB71ED41875007050B3 /* TT_CategoryHeader.h */,
 				11B3DF971ED41875007050B3 /* Foundation */,
 				11B3DFB41ED41875007050B3 /* Quartz */,
-				11B3DFB71ED41875007050B3 /* TT_CategoryHeader.h */,
 				11B3DFB81ED41875007050B3 /* UIKit */,
+				1155BF5C1EEE893F007B09BF /* YYUtils */,
 			);
 			path = Category;
 			sourceTree = "<group>";
