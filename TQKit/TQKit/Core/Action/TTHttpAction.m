@@ -10,7 +10,6 @@
 #import "TTAPIClient.h"
 #import "TTProgressHUD.h"
 #import "TT_CategoryHeader.h"
-#import "NSDictionary+TTExt2UrlParam.h"
 #import "YYCache.h"
 #import <math.h>
 

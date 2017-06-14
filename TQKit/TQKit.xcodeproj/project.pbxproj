@@ -116,10 +116,6 @@
 		11B3E0931ED41875007050B3 /* TTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E0041ED41875007050B3 /* TTMediator.m */; };
 		11B3E0941ED41875007050B3 /* UIViewController+TTExt2Parameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E0051ED41875007050B3 /* UIViewController+TTExt2Parameter.h */; };
 		11B3E0951ED41875007050B3 /* UIViewController+TTExt2Parameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E0061ED41875007050B3 /* UIViewController+TTExt2Parameter.m */; };
-		11B3E0961ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E0081ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h */; };
-		11B3E0971ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E0091ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.m */; };
-		11B3E0981ED41875007050B3 /* UIViewController+TTExt2NavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E00A1ED41875007050B3 /* UIViewController+TTExt2NavigationBar.h */; };
-		11B3E0991ED41875007050B3 /* UIViewController+TTExt2NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E00B1ED41875007050B3 /* UIViewController+TTExt2NavigationBar.m */; };
 		11B3E09A1ED41875007050B3 /* TT_Define_App.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E00D1ED41875007050B3 /* TT_Define_App.h */; };
 		11B3E09B1ED41875007050B3 /* TT_Define_Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E00E1ED41875007050B3 /* TT_Define_Singleton.h */; };
 		11B3E09C1ED41875007050B3 /* AppInfoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E0111ED41875007050B3 /* AppInfoUtil.h */; };
@@ -259,10 +255,6 @@
 		11B3E0041ED41875007050B3 /* TTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMediator.m; sourceTree = "<group>"; };
 		11B3E0051ED41875007050B3 /* UIViewController+TTExt2Parameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TTExt2Parameter.h"; sourceTree = "<group>"; };
 		11B3E0061ED41875007050B3 /* UIViewController+TTExt2Parameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TTExt2Parameter.m"; sourceTree = "<group>"; };
-		11B3E0081ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TTExt2NavigationBar.h"; sourceTree = "<group>"; };
-		11B3E0091ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TTExt2NavigationBar.m"; sourceTree = "<group>"; };
-		11B3E00A1ED41875007050B3 /* UIViewController+TTExt2NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TTExt2NavigationBar.h"; sourceTree = "<group>"; };
-		11B3E00B1ED41875007050B3 /* UIViewController+TTExt2NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TTExt2NavigationBar.m"; sourceTree = "<group>"; };
 		11B3E00D1ED41875007050B3 /* TT_Define_App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TT_Define_App.h; sourceTree = "<group>"; };
 		11B3E00E1ED41875007050B3 /* TT_Define_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TT_Define_Singleton.h; sourceTree = "<group>"; };
 		11B3E0111ED41875007050B3 /* AppInfoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoUtil.h; sourceTree = "<group>"; };
@@ -755,10 +747,6 @@
 		11B3E0071ED41875007050B3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				11B3E0081ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h */,
-				11B3E0091ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.m */,
-				11B3E00A1ED41875007050B3 /* UIViewController+TTExt2NavigationBar.h */,
-				11B3E00B1ED41875007050B3 /* UIViewController+TTExt2NavigationBar.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -903,7 +891,6 @@
 				11B3E0A11ED41875007050B3 /* SVIndefiniteAnimatedView.h in Headers */,
 				11B3E0531ED41875007050B3 /* NSString+TTExt.h in Headers */,
 				1155BF4A1EEE4905007B09BF /* AFURLResponseSerialization.h in Headers */,
-				11B3E0981ED41875007050B3 /* UIViewController+TTExt2NavigationBar.h in Headers */,
 				11B3E0601ED41875007050B3 /* UIApplication+TTExt.h in Headers */,
 				11B3E07A1ED41875007050B3 /* UIImageView+TTExt.h in Headers */,
 				11B3E08E1ED41875007050B3 /* TTHttpAction.h in Headers */,
@@ -925,7 +912,6 @@
 				11B3E0471ED41875007050B3 /* NSDate+TTExt.h in Headers */,
 				11B3E09B1ED41875007050B3 /* TT_Define_Singleton.h in Headers */,
 				1155BF431EEE4905007B09BF /* AFNetworking.h in Headers */,
-				11B3E0961ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.h in Headers */,
 				11B3E0921ED41875007050B3 /* TTMediator.h in Headers */,
 				11B3E04F1ED41875007050B3 /* NSNumber+TTExt.h in Headers */,
 				11B3E0571ED41875007050B3 /* NSTimer+TTExt.h in Headers */,
@@ -1024,7 +1010,6 @@
 				11B3E0811ED41875007050B3 /* UIScrollView+TTExt.m in Sources */,
 				11B3E0831ED41875007050B3 /* UITableView+TTExt.m in Sources */,
 				1155BF4D1EEE4905007B09BF /* AFURLSessionManager.m in Sources */,
-				11B3E0991ED41875007050B3 /* UIViewController+TTExt2NavigationBar.m in Sources */,
 				11B3E0931ED41875007050B3 /* TTMediator.m in Sources */,
 				11B3E06B1ED41875007050B3 /* UIButton+TTExt2ImagePosition.m in Sources */,
 				11B3E0731ED41875007050B3 /* UIFont+TTExt.m in Sources */,
@@ -1048,7 +1033,6 @@
 				11B3E0791ED41875007050B3 /* UIImage+TTExt2Effect.m in Sources */,
 				11B3E08F1ED41875007050B3 /* TTHttpAction.m in Sources */,
 				11B3E06D1ED41875007050B3 /* UIColor+TTExt.m in Sources */,
-				11B3E0971ED41875007050B3 /* UINavigationController+TTExt2NavigationBar.m in Sources */,
 				1155BF4B1EEE4905007B09BF /* AFURLResponseSerialization.m in Sources */,
 				11B3E0951ED41875007050B3 /* UIViewController+TTExt2Parameter.m in Sources */,
 				11B3E0481ED41875007050B3 /* NSDate+TTExt.m in Sources */,

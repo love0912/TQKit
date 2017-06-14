@@ -96,6 +96,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
                 end
                 sss.subspec 'UIDevice' do |ssss|
                     ssss.source_files = 'TQKit/TQKit/Category/UIKit/UIDevice/*'
+                    ssss.dependency 'TQKit/Category/Foundation/NSString'
                 end
                 sss.subspec 'UIFont' do |ssss|
                     ssss.source_files = 'TQKit/TQKit/Category/UIKit/UIFont/*'
@@ -137,7 +138,36 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
                 sss.source_files = 'TQKit/TQKit/Category/YYUtils/*'
                 sss.dependency 'TQKit/Category/UIKit/UIView'
             end
-
     end
 
+    s.subspec 'Macros' do |ss|
+        ss.source_files = 'TQKit/TQKit/Macros/*.h'
+    end
+
+    s.subspec 'Utils' do |ss|
+        ss.source_files = 'TQKit/TQKit/Utils/TT_Utils_Header.h'
+
+        ss.subspec 'TTAlertUtil' do |sss|
+            sss.source_files = 'TQKit/TQKit/Utils/TTAlertUtil/*'
+            sss.dependency 'TQKit/Category/Foundation/NSString'
+        end
+        ss.subspec 'TTProgressHUD' do |sss|
+        sss.source_files = 'TQKit/TQKit/Utils/TTProgressHUD/*.{h,m}', 'TQKit/TQKit/Utils/TTProgressHUD/**/*.{h,m}'
+            sss.resources = "TQKit/TQKit/Utils/TTProgressHUD/SVProgressHUD/SVProgressHUD.bundle/*.png"
+        end
+        ss.subspec 'AppInfoUtil' do |sss|
+            sss.source_files = 'TQKit/TQKit/Utils/AppInfoUtil/*'
+            sss.dependency 'TQKit/3rdLib/AFNetworking'
+        end
+        ss.subspec 'TTQRCodeUtil' do |sss|
+            sss.source_files = 'TQKit/TQKit/Utils/TTQRCodeUtil/*'
+        end
+        ss.subspec 'TTTableViewUtil' do |sss|
+            sss.source_files = 'TQKit/TQKit/Utils/TTTableViewUtil/*'
+        end
+        ss.subspec 'UserInfoUtil' do |sss|
+            sss.source_files = 'TQKit/TQKit/Utils/UserInfoUtil/*'
+        end
+
+    end
 end
