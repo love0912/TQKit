@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   
   s.ios.deployment_target = "8.0"
   
-  s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "0.0.2", :submodules => true }
+s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s.version}"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -36,8 +36,8 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Category' do |ss|
-        ss.public_header_files = 'TQKit/TQKit/Category/TT_CategoryHeader.h'
-        ss.source_files = 'TQKit/TQKit/Category/*.h'
+#ss.public_header_files = 'TQKit/TQKit/Category/TT_CategoryHeader.h'
+        ss.source_files = 'TQKit/TQKit/Category/YYCategoriesMacro.h'
             ss.subspec 'Foundation' do |sss|
             sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
 
@@ -53,11 +53,12 @@ Pod::Spec.new do |s|
             sss.subspec 'NSObject' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSObject/*'
             end
-            sss.subspec 'NSString' do |ssss|
-                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSString/*'
-            end
             sss.subspec 'NSNumber' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSNumber/*'
+            end
+            sss.subspec 'NSString' do |ssss|
+                ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSString/*'
+                ssss.dependency 'TQKit/Category/Foundation/NSNumber'
             end
             sss.subspec 'NSTimer' do |ssss|
                 ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSTimer/*'
