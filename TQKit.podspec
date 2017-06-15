@@ -153,7 +153,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         end
         ss.subspec 'TTProgressHUD' do |sss|
         sss.source_files = 'TQKit/TQKit/Utils/TTProgressHUD/*.{h,m}', 'TQKit/TQKit/Utils/TTProgressHUD/**/*.{h,m}'
-            sss.resources = "TQKit/TQKit/Utils/TTProgressHUD/SVProgressHUD/SVProgressHUD.bundle/*.png"
+            sss.resources = "TQKit/TQKit/Utils/TTProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
             sss.dependency 'TQKit/3rdLib'
         end
         ss.subspec 'AppInfoUtil' do |sss|
