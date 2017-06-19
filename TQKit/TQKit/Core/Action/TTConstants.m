@@ -47,7 +47,7 @@ static TTConstants *sharedInstance = nil;
     if (self) {
         NSString *apiFilePath = [[NSBundle mainBundle] pathForResource:@"TQ_Config" ofType:@"plist"];
         NSMutableDictionary *apiData = [[NSMutableDictionary alloc] initWithContentsOfFile:apiFilePath];
-        [self setApiDataOfDic:apiData];
+        [self setApiDataOfDic:apiData[@"APIRetrunInfo"]];
         
         NSString *signFilePath = [[NSBundle mainBundle] pathForResource:@"TQ_Signature" ofType:@"plist"];
         NSMutableDictionary *signData = [[NSMutableDictionary alloc] initWithContentsOfFile:signFilePath];
