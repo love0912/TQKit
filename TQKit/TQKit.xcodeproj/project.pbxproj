@@ -31,6 +31,8 @@
 		1155BF5B1EEE7F2A007B09BF /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */; };
 		1155BF5F1EEE8940007B09BF /* YYCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5D1EEE8940007B09BF /* YYCGUtilities.h */; };
 		1155BF601EEE8940007B09BF /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */; };
+		117D11151EF7644800303F8D /* TTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 117D11131EF7644800303F8D /* TTConstants.h */; };
+		117D11161EF7644800303F8D /* TTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D11141EF7644800303F8D /* TTConstants.m */; };
 		118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A68241EE7838300DFCC13 /* NSData+TTExt.h */; };
 		118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A68251EE7838300DFCC13 /* NSData+TTExt.m */; };
 		118A68291EE7861A00DFCC13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A68281EE7861A00DFCC13 /* libz.tbd */; };
@@ -168,6 +170,8 @@
 		1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
 		1155BF5D1EEE8940007B09BF /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
 		1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
+		117D11131EF7644800303F8D /* TTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConstants.h; sourceTree = "<group>"; };
+		117D11141EF7644800303F8D /* TTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTConstants.m; sourceTree = "<group>"; };
 		118A68241EE7838300DFCC13 /* NSData+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TTExt.h"; sourceTree = "<group>"; };
 		118A68251EE7838300DFCC13 /* NSData+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+TTExt.m"; sourceTree = "<group>"; };
 		118A68281EE7861A00DFCC13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -711,6 +715,8 @@
 				11B3DFFC1ED41875007050B3 /* TTAPIClient.m */,
 				11B3DFFD1ED41875007050B3 /* TTHttpAction.h */,
 				11B3DFFE1ED41875007050B3 /* TTHttpAction.m */,
+				117D11131EF7644800303F8D /* TTConstants.h */,
+				117D11141EF7644800303F8D /* TTConstants.m */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -906,6 +912,7 @@
 				11B3E0AA1ED41875007050B3 /* TTProgressHUD.h in Headers */,
 				118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */,
 				11B3E0491ED41875007050B3 /* NSDate+TTExt2Format.h in Headers */,
+				117D11151EF7644800303F8D /* TTConstants.h in Headers */,
 				11B3E0641ED41875007050B3 /* UIBezierPath+TTExt.h in Headers */,
 				11B3E0A61ED41875007050B3 /* SVProgressHUD.h in Headers */,
 				11B3E0A31ED41875007050B3 /* SVProgressAnimatedView.h in Headers */,
@@ -1055,6 +1062,7 @@
 				11B3E0891ED41875007050B3 /* UIView+TTExt.m in Sources */,
 				1155BF491EEE4905007B09BF /* AFURLRequestSerialization.m in Sources */,
 				1155BF451EEE4905007B09BF /* AFNetworkReachabilityManager.m in Sources */,
+				117D11161EF7644800303F8D /* TTConstants.m in Sources */,
 				11B3E0A41ED41875007050B3 /* SVProgressAnimatedView.m in Sources */,
 				11B3E0A91ED41875007050B3 /* SVRadialGradientLayer.m in Sources */,
 				11B3E0A21ED41875007050B3 /* SVIndefiniteAnimatedView.m in Sources */,

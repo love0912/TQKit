@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <Security/Security.h>
-#define kUserName  @"com.tqSoft.username"
 
 @interface UserInfoUtil : NSObject
 
@@ -38,6 +37,15 @@
  @param ID keyChain中保存的ID
  */
 + (void)deleteObjForKeyChainByID:(NSString *)ID;
+
+
+/**
+ 保存登录名和密码 -- 用于签名
+
+ @param loginName 登录名
+ @param md5Pwd md5后的登录密码
+ */
++ (void)saveSignatureByLoginName:(NSString *)loginName md5Pwd:(NSString *)md5Pwd;
 
 
 @end

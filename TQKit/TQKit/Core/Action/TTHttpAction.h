@@ -9,9 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "TTAPIClient.h"
 
-#define APIReturnCode @""
-#define APIReturnData @""
-#define APIReturnCodeSuccess 200
 /**
  *  HTTP访问回调
  *

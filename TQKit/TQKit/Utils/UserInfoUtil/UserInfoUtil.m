@@ -7,6 +7,7 @@
 //
 
 #import "UserInfoUtil.h"
+#import "TTConstants.h"
 
 @implementation UserInfoUtil
 
@@ -70,5 +71,17 @@
     SecItemDelete((CFDictionaryRef)keychainQuery);
 }
 
+/**
+ 保存登录名和密码 -- 用于签名
+ 
+ @param loginName 登录名
+ @param md5Pwd md5后的登录密码
+ */
++ (void)saveSignatureByLoginName:(NSString *)loginName md5Pwd:(NSString *)md5Pwd {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault setObject:loginName forKey:[TTConstants sharedInstance].signLoginNameKey];
+    [userDefault setObject:md5Pwd forKey:[TTConstants sharedInstance].signLoginPwdKey];
+    [userDefault synchronize];
+}
 
 @end

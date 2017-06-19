@@ -11,11 +11,8 @@
 #import "TTProgressHUD.h"
 #import "TT_CategoryHeader.h"
 #import "YYCache.h"
+#import "TTConstants.h"
 #import <math.h>
-
-#define kSignSaltStarIndex 7
-#define kSignSaltLength 3
-#define kSigntureKey @"TQSignature"
 
 
 typedef enum : NSUInteger {
@@ -29,6 +26,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) TTAPIClient *apiClient;
 
 @property (nonatomic, strong) YYCache *cache;
+
+@property (nonatomic, strong) TTConstants *ttConstants;
 
 @end
 
@@ -50,6 +49,7 @@ static NSString *TTCacheName = @"TTAPICache";
     if (self) {
         _apiClient = [TTAPIClient sharedClient];
         _cache = [YYCache cacheWithName:TTCacheName];
+        _ttConstants = [TTConstants sharedInstance];
     }
     return self;
 }
@@ -142,7 +142,7 @@ static NSString *TTCacheName = @"TTAPICache";
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (requestBlock) {
             NSString *dataString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-            requestBlock(APIReturnCodeSuccess, dataString, nil);
+            requestBlock(_ttConstants.apiReturnCodeSuccess, dataString, nil);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self failResponseError:error result:requestBlock];
@@ -216,13 +216,13 @@ static NSString *TTCacheName = @"TTAPICache";
 
 - (void)setSignture2HeaderForParameter:(id)parameters orUrlString:(NSString *)urlString {
     NSString *signture = [self getSignatureByParameter:(NSDictionary *)parameters orUrlString:urlString];
-    [_apiClient.requestSerializer setValue:signture forHTTPHeaderField:kSigntureKey];
+    [_apiClient.requestSerializer setValue:signture forHTTPHeaderField:_ttConstants.signatureKey];
 }
 
 - (void)successResponseObject:(id  _Nullable)responseObject result:(ResultBlock)requestBlock cacheKey:(NSString *)key {
     [_cache setObject:responseObject forKey:key];
     if (requestBlock) {
-        requestBlock([responseObject[APIReturnCode] integerValue], responseObject[APIReturnData], nil);
+        requestBlock([responseObject[_ttConstants.apiReturnCode] integerValue], responseObject[_ttConstants.apiReturnData], nil);
     }
 }
 
@@ -271,12 +271,14 @@ static NSString *TTCacheName = @"TTAPICache";
         [signature appendString:urlString];
     }
 
-#warning 如果登录 ，加上用户名和密码
-
-    
+    //如果登录 ，加上用户名和密码
+    if ([NSUserDefaults tt_objectForKey:_ttConstants.signLoginNameKey] != nil) {
+        [signature appendString:[NSUserDefaults tt_objectForKey:_ttConstants.signLoginNameKey]];
+        [signature appendString:[NSUserDefaults tt_objectForKey:_ttConstants.signLoginPwdKey]];
+    }
     
     NSMutableString *md5Signature = [[NSMutableString alloc] initWithString:[signature tt_md5String]];
-    [md5Signature insertString:[self randomStringWithLength:kSignSaltLength] atIndex:kSignSaltStarIndex];
+    [md5Signature insertString:[self randomStringWithLength:_ttConstants.signSaltLength] atIndex:_ttConstants.signSaltStartIndex];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     return [md5Signature stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
