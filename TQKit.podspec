@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "0.0.2"
+  s.version      = "1.0.0"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.
@@ -168,6 +168,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         end
         ss.subspec 'UserInfoUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/UserInfoUtil/*'
+            sss.dependency 'TQKit/Core/Action'
         end
 
     end
