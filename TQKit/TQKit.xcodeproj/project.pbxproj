@@ -33,6 +33,8 @@
 		1155BF601EEE8940007B09BF /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */; };
 		117D11151EF7644800303F8D /* TTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 117D11131EF7644800303F8D /* TTConstants.h */; };
 		117D11161EF7644800303F8D /* TTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D11141EF7644800303F8D /* TTConstants.m */; };
+		117D11191EF8B83100303F8D /* NSString+TTExt2Vertify.h in Headers */ = {isa = PBXBuildFile; fileRef = 117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */; };
+		117D111A1EF8B83100303F8D /* NSString+TTExt2Vertify.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */; };
 		118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A68241EE7838300DFCC13 /* NSData+TTExt.h */; };
 		118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A68251EE7838300DFCC13 /* NSData+TTExt.m */; };
 		118A68291EE7861A00DFCC13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A68281EE7861A00DFCC13 /* libz.tbd */; };
@@ -172,6 +174,8 @@
 		1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
 		117D11131EF7644800303F8D /* TTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConstants.h; sourceTree = "<group>"; };
 		117D11141EF7644800303F8D /* TTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTConstants.m; sourceTree = "<group>"; };
+		117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTExt2Vertify.h"; sourceTree = "<group>"; };
+		117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTExt2Vertify.m"; sourceTree = "<group>"; };
 		118A68241EE7838300DFCC13 /* NSData+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TTExt.h"; sourceTree = "<group>"; };
 		118A68251EE7838300DFCC13 /* NSData+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+TTExt.m"; sourceTree = "<group>"; };
 		118A68281EE7861A00DFCC13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -471,6 +475,8 @@
 				11B3DFAC1ED41875007050B3 /* NSString+TTExt2Frame.m */,
 				118A682A1EE7868600DFCC13 /* NSString+TTExt2Hash.h */,
 				118A682B1EE7868600DFCC13 /* NSString+TTExt2Hash.m */,
+				117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */,
+				117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -888,6 +894,7 @@
 				11B3E0841ED41875007050B3 /* UITextField+TTExt.h in Headers */,
 				1155BF5B1EEE7F2A007B09BF /* YYCategoriesMacro.h in Headers */,
 				11B3E05F1ED41875007050B3 /* TT_UIKitHeader.h in Headers */,
+				117D11191EF8B83100303F8D /* NSString+TTExt2Vertify.h in Headers */,
 				11B3E05E1ED41875007050B3 /* TT_CategoryHeader.h in Headers */,
 				1155BF461EEE4905007B09BF /* AFSecurityPolicy.h in Headers */,
 				11B3E0901ED41875007050B3 /* BaseService.h in Headers */,
@@ -1015,6 +1022,7 @@
 				11B3E07D1ED41875007050B3 /* UINavigationBar+TTExt2BGColor.m in Sources */,
 				11B3E0651ED41875007050B3 /* UIBezierPath+TTExt.m in Sources */,
 				11B3E0811ED41875007050B3 /* UIScrollView+TTExt.m in Sources */,
+				117D111A1EF8B83100303F8D /* NSString+TTExt2Vertify.m in Sources */,
 				11B3E0831ED41875007050B3 /* UITableView+TTExt.m in Sources */,
 				1155BF4D1EEE4905007B09BF /* AFURLSessionManager.m in Sources */,
 				11B3E0931ED41875007050B3 /* TTMediator.m in Sources */,
