@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.
@@ -31,13 +31,14 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
             sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
         end
 
-        ss.subspec 'YYCache' do |sss1|
-            sss1.source_files = 'TQKit/TQKit/3rdLib/YYCache/*'
-        end
+#ss.subspec 'YYCache' do |sss1|
+#     sss1.source_files = 'TQKit/TQKit/3rdLib/YYCache/*'
+#  end
     end
 
     s.subspec 'Category' do |ss|
         ss.source_files = 'TQKit/TQKit/Category/*.h'
+        ss.dependency 'YYCache', '~> 1.0.4'
             ss.subspec 'Foundation' do |sss|
                 sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
                 sss.subspec 'NSData' do |ssss|
