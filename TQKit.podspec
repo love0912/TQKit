@@ -25,16 +25,16 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
 
   s.requires_arc = true
 
-    s.subspec '3rdLib' do |ss|
-        ss.dependency 'TQKit/Category'
-        ss.subspec 'AFNetworking' do |sss|
-            sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
-        end
+#  s.subspec '3rdLib' do |ss|
+#  ss.dependency 'TQKit/Category'
+# ss.subspec 'AFNetworking' do |sss|
+#  sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
+#end
 
 #ss.subspec 'YYCache' do |sss1|
 #     sss1.source_files = 'TQKit/TQKit/3rdLib/YYCache/*'
 #  end
-    end
+# end
 
     s.subspec 'Category' do |ss|
         ss.source_files = 'TQKit/TQKit/Category/*.h'
@@ -153,13 +153,12 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
             sss.dependency 'TQKit/Category/Foundation/NSString'
         end
         ss.subspec 'TTProgressHUD' do |sss|
-        sss.source_files = 'TQKit/TQKit/Utils/TTProgressHUD/*.{h,m}', 'TQKit/TQKit/Utils/TTProgressHUD/**/*.{h,m}'
-            sss.resources = "TQKit/TQKit/Utils/TTProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-            sss.dependency 'TQKit/3rdLib'
+        sss.source_files = 'TQKit/TQKit/Utils/TTProgressHUD/*.{h,m}'
+            sss.dependency 'SVProgressHUD', '~> 2.1.2'
         end
         ss.subspec 'AppInfoUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/AppInfoUtil/*'
-            sss.dependency 'TQKit/3rdLib/AFNetworking'
+            sss.dependency 'TQKit/Core'
         end
         ss.subspec 'TTQRCodeUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/TTQRCodeUtil/*'
@@ -175,6 +174,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
     end
 
     s.subspec 'Core' do |ss|
+        ss.dependency 'AFNetworking', '~> 3.1.0'
         ss.subspec 'Action' do |sss|
             sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}', 'TQKit/TQKit/Core/Action/**/*.{h,m}'
             sss.dependency 'TQKit/Utils/TTProgressHUD'
