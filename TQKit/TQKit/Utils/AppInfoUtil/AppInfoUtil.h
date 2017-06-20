@@ -13,6 +13,7 @@
 #import "EventKit/EventKit.h"
 #import "AVFoundation/AVFoundation.h"
 #import "AssetsLibrary/AssetsLibrary.h"
+#import <AFNetworking/AFNetworking.h>
 
 typedef void(^GrantBlock)(BOOL granted);
 

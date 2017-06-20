@@ -9,7 +9,6 @@
 #import "AppInfoUtil.h"
 #import <Photos/Photos.h>
 #import <Contacts/Contacts.h>
-#import <AFNetworking/AFNetworking.h>
 
 @implementation AppInfoUtil
 
