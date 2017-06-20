@@ -6,7 +6,7 @@
 //  Copyright © 2017年 天智慧启. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 #import "Reachability.h"
 
 @interface TTAPIClient : AFHTTPSessionManager
