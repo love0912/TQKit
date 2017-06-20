@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.
@@ -143,11 +143,12 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
 
     s.subspec 'Macros' do |ss|
         ss.source_files = 'TQKit/TQKit/Macros/*.h'
+        ss.dependency 'TQKit/Category'
     end
 
     s.subspec 'Utils' do |ss|
         ss.source_files = 'TQKit/TQKit/Utils/TT_Utils_Header.h'
-
+        ss.dependency 'TQKit/Macros'
         ss.subspec 'TTAlertUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/TTAlertUtil/*'
             sss.dependency 'TQKit/Category/Foundation/NSString'
@@ -158,7 +159,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         end
         ss.subspec 'AppInfoUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/AppInfoUtil/*'
-            sss.dependency 'TQKit/Core'
+            sss.dependency 'AFNetworking', '~> 3.1.0'
         end
         ss.subspec 'TTQRCodeUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/TTQRCodeUtil/*'
