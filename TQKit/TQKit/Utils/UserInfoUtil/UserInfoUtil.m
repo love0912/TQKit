@@ -84,4 +84,14 @@
     [userDefault synchronize];
 }
 
+/**
+ 删除用户签名的登录名和密码
+ */
++ (void)removeSignature {
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    [userDefault removeObjectForKey:[TTConstants sharedInstance].signLoginNameKey];
+    [userDefault removeObjectForKey:[TTConstants sharedInstance].signLoginPwdKey];
+    [userDefault synchronize];
+}
+
 @end

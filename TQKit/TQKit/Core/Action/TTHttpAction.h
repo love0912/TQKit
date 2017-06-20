@@ -86,4 +86,21 @@ typedef void(^ResultBlock)(NSInteger errCode, NSObject *data, NSError *errMsg);
  @param requestBlock 回调函数
  */
 - (void)getHtmlStringOfURLString:(NSString *)URLString result:(ResultBlock)requestBlock;
+
+#pragma mark - 设置\获取Http Header 的值
+/**
+ 设置Http Header参数值
+ 
+ @param value value
+ @param field key
+ */
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
+
+/**
+ 获取Http header的值
+ 
+ @param field key
+ @return value
+ */
+- (NSString *)valueForHTTPHeaderField:(NSString *)field;
 @end

@@ -47,5 +47,8 @@
  */
 + (void)saveSignatureByLoginName:(NSString *)loginName md5Pwd:(NSString *)md5Pwd;
 
-
+/**
+ 删除用户签名的登录名和密码
+ */
++ (void)removeSignature;
 @end

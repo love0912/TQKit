@@ -149,6 +149,28 @@ static NSString *TTCacheName = @"TTAPICache";
     }];
 }
 
+#pragma mark - 设置\获取Http Header 的值
+/**
+ 设置Http Header参数值
+ 
+ @param value value
+ @param field key
+ */
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field {
+    [_apiClient.requestSerializer setValue:value forHTTPHeaderField:field];
+}
+
+/**
+ 获取Http header的值
+ 
+ @param field key
+ @return value
+ */
+- (NSString *)valueForHTTPHeaderField:(NSString *)field {
+    return [_apiClient.requestSerializer valueForHTTPHeaderField:field];
+}
+
+
 #pragma mark - private
 /**
  Http访问请求
