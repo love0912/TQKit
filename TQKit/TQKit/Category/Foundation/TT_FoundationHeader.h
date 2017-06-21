@@ -13,6 +13,7 @@
 #import "NSString+TTExt.h"
 #import "NSString+TTExt2Frame.h"
 #import "NSString+TTExt2Hash.h"
+#import "NSString+TTExt2Vertify.h"
 #import "NSNumber+TTExt.h"
 #import "NSDictionary+TTExt.h"
 #import "NSDictionary+TTExt2UrlParam.h"
