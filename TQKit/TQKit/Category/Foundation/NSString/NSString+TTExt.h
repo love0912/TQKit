@@ -128,6 +128,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSString *)tt_stringByEscapingHTML;
 
+/**
+ 格式化电话号码显示
+
+ @return fg. 133 3333 3333
+ */
+- (NSString *)tt_formatToPhoneNumber;
+
+/**
+ 格式化银行卡显示
+
+ @return fg. xxxx xxxx xxxx xxx
+ */
+- (NSString *)tt_formatToCardNumber;
+
 
 @end
 

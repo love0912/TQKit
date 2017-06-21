@@ -9,6 +9,7 @@
 #import "NSString+TTExt.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "NSNumber+TTExt.h"
+#import "NSString+TTExt2Vertify.h"
 
 @implementation NSString (TTExt)
 #pragma mark - Utilities
@@ -307,5 +308,51 @@
     return result;
 }
 
+/**
+ 格式化电话号码显示
+ 
+ @return fg. 133 3333 3333
+ */
+- (NSString *)tt_formatToPhoneNumber {
+    if ([self tt_isMobileNumber]) {
+        NSMutableString *tmpString = [[NSMutableString alloc] initWithString:self];
+        [tmpString replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, tmpString.length)];
+        //    139 1697 0340
+        if ([tmpString length] > 3) {
+            [tmpString insertString:@" " atIndex:3];
+        }
+        if ([tmpString length] > 8) {
+            [tmpString insertString:@" " atIndex:8];
+        }
+        return tmpString;
+    }
+    return self == nil ? @"" : self;
+}
 
+/**
+ 格式化银行卡显示
+ 
+ @return fg. xxxx xxxx xxxx xxx
+ */
+- (NSString *)tt_formatToCardNumber {
+    if ([self tt_isBankCard]) {
+        NSMutableString *tmpString = [[NSMutableString alloc] initWithString:self];
+        [tmpString replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, tmpString.length)];
+        //6222 0210 0112 2937 680
+        if ([tmpString length] > 4) {
+            [tmpString insertString:@" " atIndex:4];
+        }
+        if ([tmpString length] > 9) {
+            [tmpString insertString:@" " atIndex:9];
+        }
+        if ([tmpString length] > 14) {
+            [tmpString insertString:@" " atIndex:14];
+        }
+        if ([tmpString length] > 19) {
+            [tmpString insertString:@" " atIndex:19];
+        }
+        return tmpString;
+    }
+    return self == nil ? @"" : self;
+}
 @end
