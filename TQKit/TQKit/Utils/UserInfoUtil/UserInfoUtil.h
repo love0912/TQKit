@@ -21,7 +21,6 @@
  */
 + (void)setPassword:(NSString *)password forKeyChainUserID:(NSString *)userId;
 
-
 /**
  从Keychain中取保存的密码
 
