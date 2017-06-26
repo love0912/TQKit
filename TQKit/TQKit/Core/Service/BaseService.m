@@ -20,6 +20,7 @@
     self = [super init];
     if (self) {
         _httpAction = [TTHttpAction sharedHttpAction];
+        _fileAction = [TTFileAction sharedFileAction];
     }
     return self;
 }

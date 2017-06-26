@@ -177,8 +177,17 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
     s.subspec 'Core' do |ss|
         ss.dependency 'AFNetworking', '~> 3.1.0'
         ss.subspec 'Action' do |sss|
-            sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}', 'TQKit/TQKit/Core/Action/**/*.{h,m}'
-            sss.dependency 'TQKit/Utils/TTProgressHUD'
+            sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}', 'TQKit/TQKit/Core/Action/Reachability/*.{h,m}'
+
+            sss.subspec 'FileAction' do |ssss|
+            ssss.source_files = 'TQKit/TQKit/Core/Action/FileAction/*.{h,m}', 'TQKit/TQKit/Core/Action/FileAction/**/*.{h,m}'
+            ssss.dependency 'TQKit/Utils'
+            end
+
+            sss.subspec 'HttpAction' do |ssss|
+            ssss.source_files = 'TQKit/TQKit/Core/Action/HttpAction/*.{h,m}'
+            ssss.dependency 'TQKit/Utils'
+            end
         end
         ss.subspec 'Service' do |sss|
             sss.source_files = 'TQKit/TQKit/Core/Service/*.{h,m}'

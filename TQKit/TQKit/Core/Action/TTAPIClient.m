@@ -39,7 +39,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"http://www.qq.com";
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     // [self.requestSerializer setAuthorizationHeaderFieldWithUsername:@"XYZ" password:@"xyzzzz"];
     self.requestSerializer                         = [AFHTTPRequestSerializer serializer];
-    self.responseSerializer                        = [AFJSONResponseSerializer serializer];
+//    self.responseSerializer                        = [AFJSONResponseSerializer serializer];
     self.requestSerializer.timeoutInterval         = 10.0;
     self.reach = [Reachability reachabilityWithHostName:AFAppDotNetAPIBaseURLString];
     //    self.securityPolicy = [self customSecurityPolicy];
@@ -55,12 +55,15 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"http://www.qq.com";
     {
         case NotReachable:
             isReachable = NO;
+            _netWorkStatus = NotReachable;
             break;
         case ReachableViaWWAN:
             isReachable = YES;
+            _netWorkStatus = ReachableViaWWAN;
             break;
         case ReachableViaWiFi:
             isReachable = YES;
+            _netWorkStatus = ReachableViaWiFi;
             break;
         default:
             break;
@@ -104,6 +107,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"http://www.qq.com";
         NSString *connectionRequiredFormatString = NSLocalizedString(@"%@, Connection Required", @"Concatenation of status string with connection requirement");
         statusString= [NSString stringWithFormat:connectionRequiredFormatString, statusString];
     }
+    
 }
 
 - (AFSecurityPolicy*)customSecurityPolicy {
@@ -129,7 +133,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"http://www.qq.com";
     return securityPolicy;
 }
 
-#pragma mark - setters
+#pragma mark - setters, getters
 - (void)setIsDetectNetwork:(BOOL)isDetectNetwork {
     _isDetectNetwork = isDetectNetwork;
     if (isDetectNetwork) {
@@ -144,5 +148,13 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"http://www.qq.com";
     } else {
         [_internetReachability stopNotifier];
     }
+}
+
+- (NetworkStatus)netWorkStatus {
+    BOOL b = [self isReachable];
+    if (b) {
+        return _netWorkStatus;
+    }
+    return NotReachable;
 }
 @end

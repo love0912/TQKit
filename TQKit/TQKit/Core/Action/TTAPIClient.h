@@ -22,4 +22,13 @@
  */
 @property (nonatomic, assign) BOOL isDetectNetwork;
 
+
+/**
+ 当前网络状态
+    NotReachable = 0,  //无网络
+	ReachableViaWiFi,  //WIFI
+	ReachableViaWWAN   // 手机网络
+ */
+@property (nonatomic, assign) NetworkStatus netWorkStatus;
+
 @end

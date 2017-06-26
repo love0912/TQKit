@@ -255,7 +255,10 @@ static NSString *TTCacheName = @"TTAPICache";
 }
 
 - (NSString *)cacheKeyWithUrlString:(NSString *)URLString parameters:(NSDictionary *)parameters {
-    NSString *keyString = [URLString stringByAppendingString:[parameters tt_urlParamString]];
+    NSString *keyString = URLString;
+    if (parameters != nil) {
+        keyString = [URLString stringByAppendingString:[parameters tt_urlParamString]];
+    }
     return [keyString tt_base64EncodedString];
 }
 

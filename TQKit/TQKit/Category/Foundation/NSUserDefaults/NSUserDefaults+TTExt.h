@@ -14,4 +14,6 @@
 
 + (id)tt_objectForKey:(NSString *)key;
 
++ (void)tt_removeObjectForKey:(NSString *)key;
+
 @end
