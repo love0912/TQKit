@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.1"
+  s.version      = "1.1.0"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.
@@ -203,6 +203,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
     end
 
     s.subspec 'Component' do |ss|
+        ss.source_files = 'TQKit/TQKit/Component/TT_ComponetHeader.h'
         ss.subspec 'TTBanner' do |sss|
             sss.source_files = 'TQKit/TQKit/Component/TTBanner/*'
         end

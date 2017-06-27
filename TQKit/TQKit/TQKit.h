@@ -24,4 +24,5 @@ FOUNDATION_EXPORT const unsigned char TQKitVersionString[];
 #import "TT_Define_App.h"
 #import "TT_Define_Singleton.h"
 #import "TT_Utils_Header.h"
+#import "TT_ComponetHeader.h"
 
