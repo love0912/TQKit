@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.0.8"
+  s.version      = "1.1.0"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.
@@ -177,19 +177,14 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
     s.subspec 'Core' do |ss|
         ss.dependency 'AFNetworking', '~> 3.1.0'
         ss.subspec 'Action' do |sss|
-            sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}', 'TQKit/TQKit/Core/Action/Reachability/*.{h,m}'
+            sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}'
+
+            sss.subspec 'Reachability' do |ssss|
+            ssss.source_files = 'TQKit/TQKit/Core/Action/Reachability/*.{h,m}'
+            end
 
             sss.subspec 'Constants' do |ssss|
             ssss.source_files = 'TQKit/TQKit/Core/Action/Constants/*.{h,m}'
-            end
-            sss.subspec 'FileAction' do |ssss|
-            ssss.source_files = 'TQKit/TQKit/Core/Action/FileAction/*.{h,m}', 'TQKit/TQKit/Core/Action/FileAction/**/*.{h,m}'
-            ssss.dependency 'TQKit/Utils'
-            end
-
-            sss.subspec 'HttpAction' do |ssss|
-            ssss.source_files = 'TQKit/TQKit/Core/Action/HttpAction/*.{h,m}'
-            ssss.dependency 'TQKit/Utils/TTProgressHUD'
             end
         end
         ss.subspec 'Service' do |sss|

@@ -10,14 +10,14 @@
 		1155BF5B1EEE7F2A007B09BF /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */; };
 		1155BF5F1EEE8940007B09BF /* YYCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5D1EEE8940007B09BF /* YYCGUtilities.h */; };
 		1155BF601EEE8940007B09BF /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */; };
-		1173359B1F01121D003919D3 /* TTFileAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335941F01121C003919D3 /* TTFileAction.h */; };
-		1173359C1F01121D003919D3 /* TTFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335951F01121C003919D3 /* TTFileAction.m */; };
-		1173359D1F01121D003919D3 /* TTHttpAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335971F01121C003919D3 /* TTHttpAction.h */; };
-		1173359E1F01121D003919D3 /* TTHttpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335981F01121C003919D3 /* TTHttpAction.m */; };
-		117335A21F01123B003919D3 /* AFURLSessionManager+TTDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335A01F01123B003919D3 /* AFURLSessionManager+TTDownload.h */; };
-		117335A31F01123B003919D3 /* AFURLSessionManager+TTDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335A11F01123B003919D3 /* AFURLSessionManager+TTDownload.m */; };
 		117335AB1F0118FD003919D3 /* TTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335A91F0118FD003919D3 /* TTConstants.h */; };
 		117335AC1F0118FD003919D3 /* TTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335AA1F0118FD003919D3 /* TTConstants.m */; };
+		117335B31F01EF01003919D3 /* AFURLSessionManager+TTDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335AD1F01EF01003919D3 /* AFURLSessionManager+TTDownload.h */; };
+		117335B41F01EF01003919D3 /* AFURLSessionManager+TTDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335AE1F01EF01003919D3 /* AFURLSessionManager+TTDownload.m */; };
+		117335B51F01EF01003919D3 /* TTFileAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335AF1F01EF01003919D3 /* TTFileAction.h */; };
+		117335B61F01EF01003919D3 /* TTFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335B01F01EF01003919D3 /* TTFileAction.m */; };
+		117335B71F01EF01003919D3 /* TTHttpAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335B11F01EF01003919D3 /* TTHttpAction.h */; };
+		117335B81F01EF01003919D3 /* TTHttpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335B21F01EF01003919D3 /* TTHttpAction.m */; };
 		117D11191EF8B83100303F8D /* NSString+TTExt2Vertify.h in Headers */ = {isa = PBXBuildFile; fileRef = 117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */; };
 		117D111A1EF8B83100303F8D /* NSString+TTExt2Vertify.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */; };
 		118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A68241EE7838300DFCC13 /* NSData+TTExt.h */; };
@@ -126,14 +126,14 @@
 		1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
 		1155BF5D1EEE8940007B09BF /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
 		1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
-		117335941F01121C003919D3 /* TTFileAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFileAction.h; sourceTree = "<group>"; };
-		117335951F01121C003919D3 /* TTFileAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTFileAction.m; sourceTree = "<group>"; };
-		117335971F01121C003919D3 /* TTHttpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHttpAction.h; sourceTree = "<group>"; };
-		117335981F01121C003919D3 /* TTHttpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHttpAction.m; sourceTree = "<group>"; };
-		117335A01F01123B003919D3 /* AFURLSessionManager+TTDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFURLSessionManager+TTDownload.h"; sourceTree = "<group>"; };
-		117335A11F01123B003919D3 /* AFURLSessionManager+TTDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFURLSessionManager+TTDownload.m"; sourceTree = "<group>"; };
 		117335A91F0118FD003919D3 /* TTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConstants.h; sourceTree = "<group>"; };
 		117335AA1F0118FD003919D3 /* TTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTConstants.m; sourceTree = "<group>"; };
+		117335AD1F01EF01003919D3 /* AFURLSessionManager+TTDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFURLSessionManager+TTDownload.h"; sourceTree = "<group>"; };
+		117335AE1F01EF01003919D3 /* AFURLSessionManager+TTDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFURLSessionManager+TTDownload.m"; sourceTree = "<group>"; };
+		117335AF1F01EF01003919D3 /* TTFileAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFileAction.h; sourceTree = "<group>"; };
+		117335B01F01EF01003919D3 /* TTFileAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTFileAction.m; sourceTree = "<group>"; };
+		117335B11F01EF01003919D3 /* TTHttpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHttpAction.h; sourceTree = "<group>"; };
+		117335B21F01EF01003919D3 /* TTHttpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHttpAction.m; sourceTree = "<group>"; };
 		117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTExt2Vertify.h"; sourceTree = "<group>"; };
 		117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTExt2Vertify.m"; sourceTree = "<group>"; };
 		118A68241EE7838300DFCC13 /* NSData+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TTExt.h"; sourceTree = "<group>"; };
@@ -263,34 +263,6 @@
 				1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */,
 			);
 			path = YYUtils;
-			sourceTree = "<group>";
-		};
-		117335931F01121C003919D3 /* FileAction */ = {
-			isa = PBXGroup;
-			children = (
-				1173359F1F01123B003919D3 /* AFURLSessionManager_TTDownload */,
-				117335941F01121C003919D3 /* TTFileAction.h */,
-				117335951F01121C003919D3 /* TTFileAction.m */,
-			);
-			path = FileAction;
-			sourceTree = "<group>";
-		};
-		117335961F01121C003919D3 /* HttpAction */ = {
-			isa = PBXGroup;
-			children = (
-				117335971F01121C003919D3 /* TTHttpAction.h */,
-				117335981F01121C003919D3 /* TTHttpAction.m */,
-			);
-			path = HttpAction;
-			sourceTree = "<group>";
-		};
-		1173359F1F01123B003919D3 /* AFURLSessionManager_TTDownload */ = {
-			isa = PBXGroup;
-			children = (
-				117335A01F01123B003919D3 /* AFURLSessionManager+TTDownload.h */,
-				117335A11F01123B003919D3 /* AFURLSessionManager+TTDownload.m */,
-			);
-			path = AFURLSessionManager_TTDownload;
 			sourceTree = "<group>";
 		};
 		117335A41F0118B7003919D3 /* Constants */ = {
@@ -661,9 +633,13 @@
 		11B3DFF71ED41875007050B3 /* Action */ = {
 			isa = PBXGroup;
 			children = (
+				117335AD1F01EF01003919D3 /* AFURLSessionManager+TTDownload.h */,
+				117335AE1F01EF01003919D3 /* AFURLSessionManager+TTDownload.m */,
+				117335AF1F01EF01003919D3 /* TTFileAction.h */,
+				117335B01F01EF01003919D3 /* TTFileAction.m */,
+				117335B11F01EF01003919D3 /* TTHttpAction.h */,
+				117335B21F01EF01003919D3 /* TTHttpAction.m */,
 				117335A41F0118B7003919D3 /* Constants */,
-				117335931F01121C003919D3 /* FileAction */,
-				117335961F01121C003919D3 /* HttpAction */,
 				11B3DFF81ED41875007050B3 /* Reachability */,
 				11B3DFFB1ED41875007050B3 /* TTAPIClient.h */,
 				11B3DFFC1ED41875007050B3 /* TTAPIClient.m */,
@@ -815,6 +791,7 @@
 				11B3E0551ED41875007050B3 /* NSString+TTExt2Frame.h in Headers */,
 				11B3E0881ED41875007050B3 /* UIView+TTExt.h in Headers */,
 				11B3E0721ED41875007050B3 /* UIFont+TTExt.h in Headers */,
+				117335B31F01EF01003919D3 /* AFURLSessionManager+TTDownload.h in Headers */,
 				11B3E0741ED41875007050B3 /* UIGestureRecognizer+TTExt.h in Headers */,
 				11B3E0AC1ED41875007050B3 /* TTQRCodeUtil.h in Headers */,
 				11B3E0821ED41875007050B3 /* UITableView+TTExt.h in Headers */,
@@ -841,15 +818,14 @@
 				11B3E0591ED41875007050B3 /* NSUserDefaults+TTExt.h in Headers */,
 				118A682C1EE7868600DFCC13 /* NSString+TTExt2Hash.h in Headers */,
 				11B3E0861ED41875007050B3 /* UITextView+TTExt.h in Headers */,
-				1173359B1F01121D003919D3 /* TTFileAction.h in Headers */,
+				117335B51F01EF01003919D3 /* TTFileAction.h in Headers */,
 				11B3E08A1ED41875007050B3 /* Reachability.h in Headers */,
 				11B3E06E1ED41875007050B3 /* UIControl+TTExt.h in Headers */,
 				11B3E06A1ED41875007050B3 /* UIButton+TTExt2ImagePosition.h in Headers */,
 				11B3E0AA1ED41875007050B3 /* TTProgressHUD.h in Headers */,
-				1173359D1F01121D003919D3 /* TTHttpAction.h in Headers */,
+				117335B71F01EF01003919D3 /* TTHttpAction.h in Headers */,
 				118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */,
 				11B3E0491ED41875007050B3 /* NSDate+TTExt2Format.h in Headers */,
-				117335A21F01123B003919D3 /* AFURLSessionManager+TTDownload.h in Headers */,
 				11B3E0641ED41875007050B3 /* UIBezierPath+TTExt.h in Headers */,
 				11B3E0471ED41875007050B3 /* NSDate+TTExt.h in Headers */,
 				11B3E09B1ED41875007050B3 /* TT_Define_Singleton.h in Headers */,
@@ -991,8 +967,8 @@
 				11B3E04C1ED41875007050B3 /* NSDictionary+TTExt.m in Sources */,
 				11B3E0671ED41875007050B3 /* UIButton+TTExt.m in Sources */,
 				11B3E0AF1ED41875007050B3 /* TTDataSource.m in Sources */,
+				117335B81F01EF01003919D3 /* TTHttpAction.m in Sources */,
 				11B3E07B1ED41875007050B3 /* UIImageView+TTExt.m in Sources */,
-				1173359E1F01121D003919D3 /* TTHttpAction.m in Sources */,
 				11B3E0521ED41875007050B3 /* NSObject+TTExt.m in Sources */,
 				11B3E0851ED41875007050B3 /* UITextField+TTExt.m in Sources */,
 				11B3E09D1ED41875007050B3 /* AppInfoUtil.m in Sources */,
@@ -1010,18 +986,18 @@
 				11B3E0541ED41875007050B3 /* NSString+TTExt.m in Sources */,
 				11B3E0751ED41875007050B3 /* UIGestureRecognizer+TTExt.m in Sources */,
 				11B3E0871ED41875007050B3 /* UITextView+TTExt.m in Sources */,
-				117335A31F01123B003919D3 /* AFURLSessionManager+TTDownload.m in Sources */,
 				11B3E0711ED41875007050B3 /* UIDevice+TTExt.m in Sources */,
 				11B3E0631ED41875007050B3 /* UIBarButtonItem+TTExt.m in Sources */,
 				11B3E0561ED41875007050B3 /* NSString+TTExt2Frame.m in Sources */,
 				11B3E04E1ED41875007050B3 /* NSDictionary+TTExt2UrlParam.m in Sources */,
 				11B3E0AD1ED41875007050B3 /* TTQRCodeUtil.m in Sources */,
 				11B3E08D1ED41875007050B3 /* TTAPIClient.m in Sources */,
+				117335B61F01EF01003919D3 /* TTFileAction.m in Sources */,
 				11B3E0501ED41875007050B3 /* NSNumber+TTExt.m in Sources */,
-				1173359C1F01121D003919D3 /* TTFileAction.m in Sources */,
 				11B3E0771ED41875007050B3 /* UIImage+TTExt.m in Sources */,
 				11B3E04A1ED41875007050B3 /* NSDate+TTExt2Format.m in Sources */,
 				11B3E0891ED41875007050B3 /* UIView+TTExt.m in Sources */,
+				117335B41F01EF01003919D3 /* AFURLSessionManager+TTDownload.m in Sources */,
 				11B3E0911ED41875007050B3 /* BaseService.m in Sources */,
 				11B3E0581ED41875007050B3 /* NSTimer+TTExt.m in Sources */,
 				1155BF601EEE8940007B09BF /* YYCGUtilities.m in Sources */,
