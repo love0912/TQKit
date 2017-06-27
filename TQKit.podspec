@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.
@@ -177,14 +177,19 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
     s.subspec 'Core' do |ss|
         ss.dependency 'AFNetworking', '~> 3.1.0'
         ss.subspec 'Action' do |sss|
-            sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}'
 
             sss.subspec 'Reachability' do |ssss|
             ssss.source_files = 'TQKit/TQKit/Core/Action/Reachability/*.{h,m}'
+            ssss.dependency 'TQKit/Utils'
             end
 
             sss.subspec 'Constants' do |ssss|
             ssss.source_files = 'TQKit/TQKit/Core/Action/Constants/*.{h,m}'
+            end
+
+            sss.subspec 'Actions' do |ssss|
+            ssss.source_files = 'TQKit/TQKit/Core/Action/Actions/*.{h,m}'
+            ssss.dependency 'TQKit/Core/Action/Reachability'
             end
         end
         ss.subspec 'Service' do |sss|
@@ -197,4 +202,8 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         end
     end
 
-end
+    s.subspec 'Component' do |ss|
+        ss.subspec 'TTBanner' do |sss|
+            sss.source_files = 'TQKit/TQKit/Component/TTBanner/*'
+        end
+    end
