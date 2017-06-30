@@ -10,6 +10,7 @@
 #define TT_ComponetHeader_h
 
 #import "TTBannerView.h"
+
 #import "TTQRCodeScan.h"
 
 #endif /* TT_ComponetHeader_h */
