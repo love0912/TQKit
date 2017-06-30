@@ -142,4 +142,9 @@ typedef void(^GrantBlock)(BOOL granted);
  */
 + (void)checkUpdateWithAppID:(NSString *)appID success:(void (^)(NSDictionary *resultDic , BOOL isNewVersion ,NSString * newVersion , NSString *currentVersion, NSError *error))success;
 
+/**
+ 禁止iOS系统进入休眠状态
+ */
++ (void)banDormancy;
+
 @end

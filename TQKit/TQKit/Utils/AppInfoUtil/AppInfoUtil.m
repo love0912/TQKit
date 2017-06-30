@@ -384,4 +384,11 @@
     }];
 }
 
+/**
+ 禁止iOS系统进入休眠状态
+ */
++ (void)banDormancy {
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+}
+
 @end
