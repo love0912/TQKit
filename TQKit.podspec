@@ -209,6 +209,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         end
         ss.subspec 'TTQRCodeScan' do |sss|
             sss.source_files = 'TQKit/TQKit/Component/TTQRCodeScan/*.{h,m}'
+            sss.frameworks = 'AVFoundation'
         end
     end
 end
