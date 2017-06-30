@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		TQKit is iOS TQ Project .Private.

@@ -16,7 +16,7 @@
 
 @end
 
-static NSString * const AFAppDotNetAPIBaseURLString = @"http://www.qq.com";
+static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
 @implementation TTAPIClient
 
 #pragma mark - lify cycle
