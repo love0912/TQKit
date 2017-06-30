@@ -149,6 +149,48 @@ static NSString *TTCacheName = @"TTAPICache";
     }];
 }
 
+#pragma mark - 新增访问三方接口，直接返回所有返回值。
+
+/**
+ 访问三方接口，直接返回所有返回值。不作Code判断，只做Http访问结果判断
+ GET请求
+ @param URLString 接口地址
+ @param parameters 字典参数
+ @param result 回调函数
+ */
+- (void)GET3rdByUrlString:(NSString *)URLString parameters:(id)parameters result:(Result3rdBlock)result {
+    [_apiClient GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (result) {
+            result(responseObject, nil);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (result) {
+            result(nil, error);
+        }
+    }];
+}
+
+/**
+ 访问三方接口，直接返回所有返回值。不作Code判断，只做Http访问结果判断
+ POST请求
+ @param URLString 接口地址
+ @param parameters 字典参数
+ @param result 回调函数
+ */
+- (void)POST3rdByUrlString:(NSString *)URLString parameters:(id)parameters result:(Result3rdBlock)result {
+    [_apiClient POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (result) {
+            result(responseObject, nil);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (result) {
+            result(nil, error);
+        }
+    }];
+}
+
 #pragma mark - 设置\获取Http Header 的值
 /**
  设置Http Header参数值
