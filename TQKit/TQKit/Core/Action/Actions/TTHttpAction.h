@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TTAPIClient.h"
+#import "TTConstants.h"
 
 /**
  *  HTTP访问回调
@@ -16,8 +17,7 @@
  *  @param data    返回数据 nil 为空
  *  @param errMsg     错误描述
  */
-typedef void(^ResultBlock)(NSInteger errCode, NSObject *data, NSError *errMsg);
-
+typedef void(^ResultBlock)(NSInteger errCode, NSObject *data, NSString *errMsg);
 
 /**
  1.1.4新增 -- 第三方接口获取的数据，不判断返回值，直接返回接口的数据

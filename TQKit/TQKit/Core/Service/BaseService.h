@@ -22,6 +22,13 @@
  */
 @property (nonatomic, strong) TTFileAction *fileAction;
 
+
+
 + (instancetype)sharedService;
+
+/**
+ API 请求成功返回的状态值
+ */
+@property (nonatomic, assign) NSInteger apiReturnCodeSuccess;
 
 @end

@@ -11,7 +11,6 @@
 #import "TTProgressHUD.h"
 #import "TT_CategoryHeader.h"
 #import "YYCache.h"
-#import "TTConstants.h"
 #import <math.h>
 
 
@@ -286,13 +285,13 @@ static NSString *TTCacheName = @"TTAPICache";
 - (void)successResponseObject:(id  _Nullable)responseObject result:(ResultBlock)requestBlock cacheKey:(NSString *)key {
     [_cache setObject:responseObject forKey:key];
     if (requestBlock) {
-        requestBlock([responseObject[_ttConstants.apiReturnCode] integerValue], responseObject[_ttConstants.apiReturnData], nil);
+        requestBlock([responseObject[_ttConstants.apiReturnCode] integerValue], responseObject[_ttConstants.apiReturnData], responseObject[_ttConstants.apiReturnMsg]);
     }
 }
 
 - (void)failResponseError:(NSError *)error result:(ResultBlock)requestBlock {
     if (requestBlock) {
-        requestBlock(error.code, nil, error);
+        requestBlock(error.code, nil, error.description);
     }
 }
 

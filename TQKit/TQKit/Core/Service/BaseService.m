@@ -25,4 +25,8 @@
     return self;
 }
 
+- (NSInteger)apiReturnCodeSuccess {
+    return [TTConstants sharedInstance].apiReturnCodeSuccess;
+}
+
 @end
