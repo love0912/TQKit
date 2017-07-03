@@ -36,6 +36,8 @@
 		118A68291EE7861A00DFCC13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A68281EE7861A00DFCC13 /* libz.tbd */; };
 		118A682C1EE7868600DFCC13 /* NSString+TTExt2Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A682A1EE7868600DFCC13 /* NSString+TTExt2Hash.h */; };
 		118A682D1EE7868600DFCC13 /* NSString+TTExt2Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A682B1EE7868600DFCC13 /* NSString+TTExt2Hash.m */; };
+		119369571F09E449003285E2 /* NSDate+TTExt2InternetDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 119369551F09E449003285E2 /* NSDate+TTExt2InternetDate.h */; };
+		119369581F09E449003285E2 /* NSDate+TTExt2InternetDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 119369561F09E449003285E2 /* NSDate+TTExt2InternetDate.m */; };
 		11B3DF731ED41827007050B3 /* TQKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF711ED41827007050B3 /* TQKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11B3E0471ED41875007050B3 /* NSDate+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DF991ED41875007050B3 /* NSDate+TTExt.h */; };
 		11B3E0481ED41875007050B3 /* NSDate+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DF9A1ED41875007050B3 /* NSDate+TTExt.m */; };
@@ -165,6 +167,8 @@
 		118A68281EE7861A00DFCC13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		118A682A1EE7868600DFCC13 /* NSString+TTExt2Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTExt2Hash.h"; sourceTree = "<group>"; };
 		118A682B1EE7868600DFCC13 /* NSString+TTExt2Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTExt2Hash.m"; sourceTree = "<group>"; };
+		119369551F09E449003285E2 /* NSDate+TTExt2InternetDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TTExt2InternetDate.h"; sourceTree = "<group>"; };
+		119369561F09E449003285E2 /* NSDate+TTExt2InternetDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TTExt2InternetDate.m"; sourceTree = "<group>"; };
 		11B3DF6E1ED41827007050B3 /* TQKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TQKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B3DF711ED41827007050B3 /* TQKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQKit.h; sourceTree = "<group>"; };
 		11B3DF721ED41827007050B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -417,6 +421,8 @@
 				11B3DF9A1ED41875007050B3 /* NSDate+TTExt.m */,
 				11B3DF9B1ED41875007050B3 /* NSDate+TTExt2Format.h */,
 				11B3DF9C1ED41875007050B3 /* NSDate+TTExt2Format.m */,
+				119369551F09E449003285E2 /* NSDate+TTExt2InternetDate.h */,
+				119369561F09E449003285E2 /* NSDate+TTExt2InternetDate.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -858,6 +864,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11B3E07C1ED41875007050B3 /* UINavigationBar+TTExt2BGColor.h in Headers */,
+				119369571F09E449003285E2 /* NSDate+TTExt2InternetDate.h in Headers */,
 				11B3E09C1ED41875007050B3 /* AppInfoUtil.h in Headers */,
 				11B3E0551ED41875007050B3 /* NSString+TTExt2Frame.h in Headers */,
 				11B3E0881ED41875007050B3 /* UIView+TTExt.h in Headers */,
@@ -1062,6 +1069,7 @@
 				11B3E0951ED41875007050B3 /* UIViewController+TTExt2Parameter.m in Sources */,
 				11B3E0481ED41875007050B3 /* NSDate+TTExt.m in Sources */,
 				11829F7E1F024F2C002F4F7E /* TTBannerView.m in Sources */,
+				119369581F09E449003285E2 /* NSDate+TTExt2InternetDate.m in Sources */,
 				11B3E05D1ED41875007050B3 /* CALayer+TTExt.m in Sources */,
 				118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */,
 				117335C31F01F574003919D3 /* AFURLSessionManager+TTDownload.m in Sources */,

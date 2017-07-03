@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.5"
+  s.version      = "1.1.6"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
-		TQKit is iOS TQ Project .Private.
+		新增去除字符串所有空格的方法，新增获取网络时间的方法
                    DESC
   s.homepage     = "https://github.com/love0912/TQKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }

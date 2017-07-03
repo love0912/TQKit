@@ -19,6 +19,7 @@
 #import "NSDictionary+TTExt2UrlParam.h"
 #import "NSDate+TTExt.h"
 #import "NSDate+TTExt2Format.h"
+#import "NSDate+TTExt2InternetDate.h"
 #import "NSTimer+TTExt.h"
 #import "NSUserDefaults+TTExt.h"
 #import "NSData+TTExt.h"

@@ -32,6 +32,8 @@
 
 @end
 
+
+
 @implementation TTQRCodeScan
 
 - (instancetype)initWithParentView:(UIView *)parentView scanFrame:(CGRect)scanFrame result:(ScanResultBlock)result {
@@ -50,7 +52,10 @@
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];//读取设备授权状态
     if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
         NSString *errorStr = @"应用相机权限受限,请在设置中启用";
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:errorStr message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去打开", nil];
+#pragma clang diagnostic pop
         alert.tag = 10000;
         [alert show];
     } else {
@@ -200,6 +205,9 @@
     }
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (alertView.tag == 10000 && buttonIndex == 1) {
         NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
@@ -231,6 +239,7 @@
         }
     }
 }
+#pragma clang diagnostic pop
 
 #pragma mark - getters,setters
 - (UIColor *)lineColor {
