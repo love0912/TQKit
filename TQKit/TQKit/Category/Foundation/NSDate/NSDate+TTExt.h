@@ -110,4 +110,13 @@
  @return Date modified by the number of desired seconds.
  */
 - (NSDate *)tt_dateByAddingSeconds:(NSInteger)seconds;
+
+#pragma mark - 1.1.6新增
+
+/**
+ 获取网络时间
+2s超时
+ @return 如果超时，返回本地时间
+ */
++ (NSDate *)tt_getNetworkDate;
 @end

@@ -324,10 +324,16 @@
  */
 + (void)callWithPhone:(NSString *)phone {
     NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",phone];
+    NSComparisonResult compare = [[UIDevice currentDevice].systemVersion compare:@"10.0"];
+    if (compare == NSOrderedDescending || compare == NSOrderedSame) {
+        /// 大于等于10.0系统使用此openURL方法
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone] options:@{} completionHandler:nil];
+    } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 #pragma clang diagnostic pop
+    }
 }
 
 /**

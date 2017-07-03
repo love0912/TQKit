@@ -147,4 +147,5 @@ typedef void(^GrantBlock)(BOOL granted);
  */
 + (void)banDormancy;
 
+
 @end

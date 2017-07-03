@@ -7,6 +7,7 @@
 //
 
 #import "NSDate+TTExt.h"
+#import "NSDate+TTExt2Format.h"
 
 @implementation NSDate (TTExt)
 
@@ -206,5 +207,38 @@
     NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + seconds;
     NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
     return newDate;
+}
+
+/**
+ 获取网络时间
+ 2s超时
+ @return 如果超时，返回本地时间
+ */
++ (NSDate *)tt_getNetworkDate {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    NSString *urlString = @"http://m.baidu.com";
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString: urlString]];
+    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    [request setTimeoutInterval: 2];
+    [request setHTTPShouldHandleCookies:FALSE];
+    [request setHTTPMethod:@"GET"];
+    NSHTTPURLResponse *response;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    NSString *date = [[response allHeaderFields] objectForKey:@"Date"];
+    date = [date substringFromIndex:5];
+    date = [date substringToIndex:[date length]-4];
+    NSDateFormatter *dMatter = [[NSDateFormatter alloc] init];
+    dMatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [dMatter setDateFormat:[NSDate tt_ymdHmsFormat]];
+    NSDate *netDate = [[dMatter dateFromString:date] dateByAddingTimeInterval:60*60*8];
+    
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate: netDate];
+    NSDate *localeDate = [netDate  dateByAddingTimeInterval: interval];
+    return localeDate;
+#pragma clang diagnostic pop
 }
 @end

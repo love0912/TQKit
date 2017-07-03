@@ -37,16 +37,23 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)tt_stringByTrimmingScriptsAndStrippingHTML;
 
 /**
- *  @brief  去除空格
+ *  @brief  去除字符串两端空格
  *
- *  @return 去除空格后的字符串
+ *  @return 去除字符串两端的字符串
  */
 - (NSString *)tt_stringByTrimmingWhitespace;
 
 /**
- *  @brief  去除字符串与空行
+ 去除字符串中所有的空格
+
+ @return 新的字符串
+ */
+- (NSString *)tt_stringByTrimmingAllWhitespace;
+
+/**
+ *  @brief  去除字符串两端空格与换行符
  *
- *  @return 去除字符串与空行的字符串
+ *  @return 去除字符串两端空格与换行符
  */
 - (NSString *)tt_stringByTrimmingWhitespaceAndNewlines;
 
