@@ -283,6 +283,7 @@ static NSString *TTCacheName = @"TTAPICache";
 }
 
 - (void)successResponseObject:(id  _Nullable)responseObject result:(ResultBlock)requestBlock cacheKey:(NSString *)key {
+    [TTProgressHUD hideProgressHUD];
     [_cache setObject:responseObject forKey:key];
     if (requestBlock) {
         requestBlock([responseObject[_ttConstants.apiReturnCode] integerValue], responseObject[_ttConstants.apiReturnData], responseObject[_ttConstants.apiReturnMsg]);
@@ -290,6 +291,7 @@ static NSString *TTCacheName = @"TTAPICache";
 }
 
 - (void)failResponseError:(NSError *)error result:(ResultBlock)requestBlock {
+    [TTProgressHUD hideProgressHUD];
     if (requestBlock) {
         requestBlock(error.code, nil, error.description);
     }

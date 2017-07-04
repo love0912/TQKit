@@ -39,6 +39,21 @@
 }
 
 /**
+ 设置新的数据源
+ 
+ @param dataSource 数据源
+ */
+- (void)setDataSource:(NSArray *)dataSource {
+    if (dataSource == nil) {
+        return;
+    }
+    if (_dataSource == nil) {
+        _dataSource = [NSMutableArray array];
+    }
+    [_dataSource setArray:dataSource];
+}
+
+/**
  添加数据源,用于分页
  
  @param dataSource 添加进来的数组
