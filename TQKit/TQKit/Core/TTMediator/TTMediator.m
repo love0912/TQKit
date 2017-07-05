@@ -7,7 +7,6 @@
 //
 
 #import "TTMediator.h"
-#import "UIViewController+TTExt2Parameter.h"
 #import "NSString+TTExt.h"
 
 @interface TTMediator ()
