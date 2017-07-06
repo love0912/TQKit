@@ -43,7 +43,7 @@
  
  @param dataSource 数据源
  */
-- (void)setDataSource:(NSArray *)dataSource {
+- (void)setNewDataSource:(NSArray *)dataSource {
     if (dataSource == nil) {
         return;
     }

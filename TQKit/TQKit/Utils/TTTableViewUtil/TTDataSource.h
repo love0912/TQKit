@@ -29,10 +29,10 @@ typedef void (^TTConfigureCellBlock)(id cell, id model, NSIndexPath * indexPath)
 
 /**
  设置新的数据源
-
+ 
  @param dataSource 数据源
  */
-- (void)setDataSource:(NSArray *)dataSource;
+- (void)setNewDataSource:(NSArray *)dataSource;
 
 /**
  添加数据源,用于分页

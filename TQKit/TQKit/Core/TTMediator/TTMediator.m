@@ -53,7 +53,7 @@
         self.cachedTarget[targetName] = target;
     }
     UIViewController *controller = (UIViewController *)target;
-    controller.tt_parameter = parameter;
+    [controller setTt_parameter:parameter];
     return controller;
 }
 
