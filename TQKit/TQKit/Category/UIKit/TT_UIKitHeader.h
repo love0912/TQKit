@@ -9,21 +9,27 @@
 #ifndef TT_UIKitHeader_h
 #define TT_UIKitHeader_h
 
-#import "UIColor+TTExt.h"
-#import "UIImage+TTExt.h"
-#import "UIImage+TTExt2Effect.h"
-#import "UIControl+TTExt.h"
+#import "UIApplication+TTExt.h"
 #import "UIBarButtonItem+TTExt.h"
-#import "UIGestureRecognizer+TTExt.h"
-#import "UIView+TTExt.h"
-#import "UIScrollView+TTExt.h"
-#import "UITableView+TTExt.h"
-#import "UITextField+TTExt.h"
+#import "UIBezierPath+TTExt.h"
 #import "UIButton+TTExt.h"
 #import "UIButton+TTExt2CountDown.h"
 #import "UIButton+TTExt2ImagePosition.h"
+#import "UIColor+TTExt.h"
+#import "UIControl+TTExt.h"
 #import "UIDevice+TTExt.h"
-#import "UIApplication+TTExt.h"
+#import "UIFont+TTExt.h"
+#import "UIGestureRecognizer+TTExt.h"
+#import "UIImage+TTExt.h"
+#import "UIImage+TTExt2Effect.h"
 #import "UIImageView+TTExt.h"
+#import "UINavigationBar+TTExt2BGColor.h"
+#import "UINavigationController+TTExt.h"
+#import "UIScrollView+TTExt.h"
+#import "UITableView+TTExt.h"
+#import "UITextField+TTExt.h"
+#import "UITextView+TTExt.h"
+#import "UIView+TTExt.h"
+
 
 #endif /* TT_UIKitHeader_h */

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.12"
+  s.version      = "1.1.14"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		新增去除字符串所有空格的方法，新增获取网络时间的方法
@@ -20,7 +20,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore'
+  s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore', 'SystemConfiguration'
   s.libraries   = 'sqlite3', 'z'
 
   s.requires_arc = true

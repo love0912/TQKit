@@ -152,4 +152,11 @@ typedef void(^GrantBlock)(BOOL granted);
  */
 + (void)recoverBanDormancy;
 
+/**
+ 获取当前连接的WIFI SSID
+
+ @return WIFI SSID
+ */
++ (NSString *)getCurrentWifiSSID;
+
 @end

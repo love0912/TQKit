@@ -9,6 +9,7 @@
 #import "AppInfoUtil.h"
 #import <Photos/Photos.h>
 #import <Contacts/Contacts.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @implementation AppInfoUtil
 
@@ -403,6 +404,21 @@
  */
 + (void)recoverBanDormancy {
     [UIApplication sharedApplication].idleTimerDisabled = NO;
+}
+
+/**
+ 获取当前连接的WIFI SSID
+ 
+ @return WIFI SSID
+ */
++ (NSString *)getCurrentWifiSSID {
+    NSArray *ifs = (__bridge_transfer id)CNCopySupportedInterfaces();
+    if (ifs.count > 0) {
+        NSString *ifnam = ifs.firstObject;
+        id info = (__bridge_transfer id)CNCopyCurrentNetworkInfo((__bridge CFStringRef)ifnam);
+        return info[@"SSID"];
+    }
+    return @"";
 }
 
 @end
