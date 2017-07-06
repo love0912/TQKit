@@ -397,4 +397,12 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
+
+/**
+ 恢复可休眠状态
+ */
++ (void)recoverBanDormancy {
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
+}
+
 @end

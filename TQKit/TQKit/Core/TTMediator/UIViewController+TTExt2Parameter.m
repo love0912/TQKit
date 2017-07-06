@@ -14,11 +14,13 @@ const NSString *kVCParameter;
 @implementation UIViewController (TTExt2Parameter)
 
 - (void)setTt_parameter:(NSDictionary *)tt_parameter {
-    objc_setAssociatedObject(self, &kVCParameter, tt_parameter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionaryWithDictionary:tt_parameter];
+    objc_setAssociatedObject(self, &kVCParameter, parameter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSDictionary *)tt_parameter {
-    return objc_getAssociatedObject(self, &kVCParameter);
+- (NSMutableDictionary *)tt_parameter {
+    NSDictionary *parameter = objc_getAssociatedObject(self, &kVCParameter);
+    return [NSMutableDictionary dictionaryWithDictionary:parameter];
 }
 
 @end

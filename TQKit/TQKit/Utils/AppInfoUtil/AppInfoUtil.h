@@ -147,5 +147,9 @@ typedef void(^GrantBlock)(BOOL granted);
  */
 + (void)banDormancy;
 
+/**
+ 恢复可休眠状态
+ */
++ (void)recoverBanDormancy;
 
 @end
