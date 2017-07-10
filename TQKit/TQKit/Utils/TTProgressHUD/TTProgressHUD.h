@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SVProgressHUD.h"
+#import <UIKit/UIKit.h>
 //默认取消时间
 #define TTProgressDismissSeconds 2
 

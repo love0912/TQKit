@@ -7,6 +7,7 @@
 //
 
 #import "TTProgressHUD.h"
+#import "SVProgressHUD.h"
 
 @implementation TTProgressHUD
 
