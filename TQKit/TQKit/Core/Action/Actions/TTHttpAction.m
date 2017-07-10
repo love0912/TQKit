@@ -144,7 +144,7 @@ static NSString *TTCacheName = @"TTAPICache";
             requestBlock(_ttConstants.apiReturnCodeSuccess, dataString, nil);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [self failResponseError:error result:requestBlock];
+        [self failResponseError:error result:requestBlock isShowHUD:NO];
     }];
 }
 
@@ -235,9 +235,9 @@ static NSString *TTCacheName = @"TTAPICache";
 //        }
         NSURLSessionDataTask *task = nil;
         if (methodType == Http_Post) {
-            task = [self postWithUrlString:URLString parameters:parameters result:requestBlock];
+            task = [self postWithUrlString:URLString parameters:parameters result:requestBlock isShowHUD:isShowHUD];
         } else {
-            task = [self getWithUrlString:URLString parameters:parameters result:requestBlock];
+            task = [self getWithUrlString:URLString parameters:parameters result:requestBlock isShowHUD:isShowHUD];
         }
         if (task != nil) {
             [self.arr_sessionTask addObject:task];
@@ -249,30 +249,30 @@ static NSString *TTCacheName = @"TTAPICache";
     }
 }
 
-- (NSURLSessionDataTask *)postWithUrlString:(NSString *)URLString parameters:(id)parameters result:(ResultBlock)requestBlock {
+- (NSURLSessionDataTask *)postWithUrlString:(NSString *)URLString parameters:(id)parameters result:(ResultBlock)requestBlock isShowHUD:(BOOL)isShow {
     [self setSignture2HeaderForParameter:parameters orUrlString:URLString];
     NSURLSessionDataTask *task = [_apiClient POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.arr_sessionTask removeObject:task];
         NSString *cacheKey = [self cacheKeyWithUrlString:URLString parameters:parameters];
-        [self successResponseObject:responseObject result:requestBlock cacheKey:cacheKey];
+        [self successResponseObject:responseObject result:requestBlock cacheKey:cacheKey isShowHUD:isShow];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.arr_sessionTask removeObject:task];
-        [self failResponseError:error result:requestBlock];
+        [self failResponseError:error result:requestBlock isShowHUD:isShow];
     }];
     return task;
 }
 
-- (NSURLSessionDataTask *)getWithUrlString:(NSString *)URLString parameters:(id)parameters result:(ResultBlock)requestBlock {
+- (NSURLSessionDataTask *)getWithUrlString:(NSString *)URLString parameters:(id)parameters result:(ResultBlock)requestBlock isShowHUD:(BOOL)isShow {
     [self setSignture2HeaderForParameter:parameters orUrlString:URLString];
     NSURLSessionDataTask *task = [_apiClient GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.arr_sessionTask removeObject:task];
         NSString *cacheKey = [self cacheKeyWithUrlString:URLString parameters:parameters];
-        [self successResponseObject:responseObject result:requestBlock cacheKey:cacheKey];
+        [self successResponseObject:responseObject result:requestBlock cacheKey:cacheKey isShowHUD:isShow];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.arr_sessionTask removeObject:task];
-        [self failResponseError:error result:requestBlock];
+        [self failResponseError:error result:requestBlock isShowHUD:isShow];
     }];
     return task;
 }
@@ -282,16 +282,20 @@ static NSString *TTCacheName = @"TTAPICache";
     [_apiClient.requestSerializer setValue:signture forHTTPHeaderField:_ttConstants.signatureKey];
 }
 
-- (void)successResponseObject:(id  _Nullable)responseObject result:(ResultBlock)requestBlock cacheKey:(NSString *)key {
-    [TTProgressHUD hideProgressHUD];
+- (void)successResponseObject:(id  _Nullable)responseObject result:(ResultBlock)requestBlock cacheKey:(NSString *)key isShowHUD:(BOOL)isShow{
+    if (isShow) {
+        [TTProgressHUD hideProgressHUD];
+    }
     [_cache setObject:responseObject forKey:key];
     if (requestBlock) {
         requestBlock([responseObject[_ttConstants.apiReturnCode] integerValue], responseObject[_ttConstants.apiReturnData], responseObject[_ttConstants.apiReturnMsg]);
     }
 }
 
-- (void)failResponseError:(NSError *)error result:(ResultBlock)requestBlock {
-    [TTProgressHUD hideProgressHUD];
+- (void)failResponseError:(NSError *)error result:(ResultBlock)requestBlock  isShowHUD:(BOOL)isShow {
+    if (isShow) {
+        [TTProgressHUD hideProgressHUD];
+    }
     if (requestBlock) {
         requestBlock(error.code, nil, error.description);
     }

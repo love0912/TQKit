@@ -7,12 +7,11 @@
 //
 
 #import "TTProgressHUD.h"
-#import "SVProgressHUD.h"
 
 @implementation TTProgressHUD
 
 /**
- 信息提示
+ 信息提示 -- 深色背景
  
  @param tips 信息
  */
@@ -21,7 +20,16 @@
 }
 
 /**
- 信息提示
+ 信息提示 -- 浅色背景
+
+ @param tips 信息
+ */
++ (void)showLightInfoTips:(NSString *)tips {
+    [self showLightInfoTips:tips delay:TTProgressDismissSeconds infoImage:nil];
+}
+
+/**
+ 信息提示 -- 深色背景
  
  @param tips 提示信息
  @param delay 延迟时间
@@ -29,6 +37,23 @@
 + (void)showInfoTips:(NSString *)tips delay:(float)delay {
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD showInfoWithStatus:tips];
+    [SVProgressHUD dismissWithDelay:delay];
+}
+
+/**
+ 信息提示 -- 浅色背景
+ 
+ @param tips 提示信息
+ @param delay 延迟时间
+ @param image 提示图片，nil则为默认图片
+ */
++ (void)showLightInfoTips:(NSString *)tips delay:(float)delay infoImage:(UIImage *)image {
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleLight];
+    if (image != nil) {
+        [SVProgressHUD setInfoImage:image];
+    }
     [SVProgressHUD showInfoWithStatus:tips];
     [SVProgressHUD dismissWithDelay:delay];
 }

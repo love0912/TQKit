@@ -7,25 +7,42 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SVProgressHUD.h"
 //默认取消时间
 #define TTProgressDismissSeconds 2
 
 @interface TTProgressHUD : NSObject
 
 /**
- 信息提示
+ 信息提示 -- 深色背景
  
  @param tips 信息
  */
 + (void)showInfoTips:(NSString *)tips;
 
 /**
- 信息提示
+ 信息提示 -- 浅色背景
+ 
+ @param tips 信息
+ */
++ (void)showLightInfoTips:(NSString *)tips;
+
+/**
+ 信息提示 -- 深色背景
  
  @param tips 提示信息
  @param delay 延迟时间
  */
 + (void)showInfoTips:(NSString *)tips delay:(float)delay;
+
+/**
+ 信息提示 -- 浅色背景
+ 
+ @param tips 提示信息
+ @param delay 延迟时间
+ @param image 提示图片，nil则为默认图片
+ */
++ (void)showLightInfoTips:(NSString *)tips delay:(float)delay infoImage:(UIImage *)image;
 
 /**
  成功提示, 默认2秒取消
