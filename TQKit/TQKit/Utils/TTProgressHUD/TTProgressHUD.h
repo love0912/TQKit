@@ -36,6 +36,15 @@
 + (void)showInfoTips:(NSString *)tips delay:(float)delay;
 
 /**
+ 信息提示 -- 深色背景
+ 
+ @param tips 提示信息
+ @param delay 延迟时间
+ @param image 提示图片，nil则为默认图片
+ */
++ (void)showInfoTips:(NSString *)tips delay:(float)delay infoImage:(UIImage *)image;
+
+/**
  信息提示 -- 浅色背景
  
  @param tips 提示信息
