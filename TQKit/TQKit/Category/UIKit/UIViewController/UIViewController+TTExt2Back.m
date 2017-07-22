@@ -21,7 +21,7 @@
 }
 
 - (void)tt_popToViewController:(NSString *)vcName {
-    [self tt_popToViewController:vcName animated:YES];
+    [self tt_popToViewController:[self findViewController:vcName] animated:YES];
 }
 
 - (void)tt_popToViewController:(NSString *)vcName animated:(BOOL)animated {
@@ -34,6 +34,16 @@
 
 - (void)tt_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [self.navigationController pushViewController:viewController animated:animated];
+}
+
+#pragma mark - private
+- (id)findViewController:(NSString*)className {
+    for (UIViewController *viewController in self.navigationController.viewControllers) {
+        if ([viewController isKindOfClass:NSClassFromString(className)]) {
+            return viewController;
+        }
+    }
+    return nil;
 }
 
 @end

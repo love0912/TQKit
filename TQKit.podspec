@@ -135,7 +135,6 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
                 end
                 sss.subspec 'UIViewController' do |ssss|
                     ssss.source_files = 'TQKit/TQKit/Category/UIKit/UIViewController/*'
-                    ssss.dependency 'TQKit/TQKit/Category/UIKit/UINavigationController'
                 end
             end
 
