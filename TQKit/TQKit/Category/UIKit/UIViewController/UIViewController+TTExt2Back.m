@@ -7,7 +7,6 @@
 //
 
 #import "UIViewController+TTExt2Back.h"
-#import "UINavigationController+TTExt.h"
 
 @implementation UIViewController (TTExt2Back)
 

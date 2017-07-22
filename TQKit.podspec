@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.16"
+  s.version      = "1.1.17"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		新增去除字符串所有空格的方法，新增获取网络时间的方法
@@ -116,7 +116,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
                     ssss.source_files = 'TQKit/TQKit/Category/UIKit/UINavigationBar/*'
                 end
                 sss.subspec 'UINavigationController' do |ssss|
-                    ssss.source_files = 'TQKit/TQKit/Category/UIKit/UINavigationController/*'
+                    ssss.source_files = 'TQKit/TQKit/Category/UIKit/UINavigationController/*.{h,m}'
                 end
                 sss.subspec 'UIScrollView' do |ssss|
                     ssss.source_files = 'TQKit/TQKit/Category/UIKit/UIScrollView/*'
@@ -135,6 +135,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
                 end
                 sss.subspec 'UIViewController' do |ssss|
                     ssss.source_files = 'TQKit/TQKit/Category/UIKit/UIViewController/*'
+                    ssss.dependency 'TQKit/TQKit/Category/UIKit/UINavigationController'
                 end
             end
 
