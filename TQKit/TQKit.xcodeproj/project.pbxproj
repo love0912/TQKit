@@ -10,6 +10,8 @@
 		1155BF5B1EEE7F2A007B09BF /* YYCategoriesMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */; };
 		1155BF5F1EEE8940007B09BF /* YYCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1155BF5D1EEE8940007B09BF /* YYCGUtilities.h */; };
 		1155BF601EEE8940007B09BF /* YYCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */; };
+		115626D71F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h in Headers */ = {isa = PBXBuildFile; fileRef = 115626D51F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h */; };
+		115626D81F21E9B000D5A8E0 /* UIViewController+TTExt2Back.m in Sources */ = {isa = PBXBuildFile; fileRef = 115626D61F21E9B000D5A8E0 /* UIViewController+TTExt2Back.m */; };
 		117335AB1F0118FD003919D3 /* TTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335A91F0118FD003919D3 /* TTConstants.h */; };
 		117335AC1F0118FD003919D3 /* TTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335AA1F0118FD003919D3 /* TTConstants.m */; };
 		117335C21F01F574003919D3 /* AFURLSessionManager+TTDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 117335BA1F01F574003919D3 /* AFURLSessionManager+TTDownload.h */; };
@@ -106,8 +108,8 @@
 		11B3E0871ED41875007050B3 /* UITextView+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DFF21ED41875007050B3 /* UITextView+TTExt.m */; };
 		11B3E0881ED41875007050B3 /* UIView+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DFF41ED41875007050B3 /* UIView+TTExt.h */; };
 		11B3E0891ED41875007050B3 /* UIView+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DFF51ED41875007050B3 /* UIView+TTExt.m */; };
-		11B3E08A1ED41875007050B3 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DFF91ED41875007050B3 /* Reachability.h */; };
-		11B3E08B1ED41875007050B3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DFFA1ED41875007050B3 /* Reachability.m */; };
+		11B3E08A1ED41875007050B3 /* TT_Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3DFF91ED41875007050B3 /* TT_Reachability.h */; };
+		11B3E08B1ED41875007050B3 /* TT_Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3DFFA1ED41875007050B3 /* TT_Reachability.m */; };
 		11B3E0901ED41875007050B3 /* BaseService.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E0001ED41875007050B3 /* BaseService.h */; };
 		11B3E0911ED41875007050B3 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B3E0011ED41875007050B3 /* BaseService.m */; };
 		11B3E0921ED41875007050B3 /* TTMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B3E0031ED41875007050B3 /* TTMediator.h */; };
@@ -141,6 +143,8 @@
 		1155BF5A1EEE7F2A007B09BF /* YYCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCategoriesMacro.h; sourceTree = "<group>"; };
 		1155BF5D1EEE8940007B09BF /* YYCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCGUtilities.h; sourceTree = "<group>"; };
 		1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCGUtilities.m; sourceTree = "<group>"; };
+		115626D51F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TTExt2Back.h"; sourceTree = "<group>"; };
+		115626D61F21E9B000D5A8E0 /* UIViewController+TTExt2Back.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TTExt2Back.m"; sourceTree = "<group>"; };
 		117335A91F0118FD003919D3 /* TTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConstants.h; sourceTree = "<group>"; };
 		117335AA1F0118FD003919D3 /* TTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTConstants.m; sourceTree = "<group>"; };
 		117335BA1F01F574003919D3 /* AFURLSessionManager+TTDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFURLSessionManager+TTDownload.h"; sourceTree = "<group>"; };
@@ -239,8 +243,8 @@
 		11B3DFF21ED41875007050B3 /* UITextView+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TTExt.m"; sourceTree = "<group>"; };
 		11B3DFF41ED41875007050B3 /* UIView+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExt.h"; sourceTree = "<group>"; };
 		11B3DFF51ED41875007050B3 /* UIView+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTExt.m"; sourceTree = "<group>"; };
-		11B3DFF91ED41875007050B3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		11B3DFFA1ED41875007050B3 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		11B3DFF91ED41875007050B3 /* TT_Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TT_Reachability.h; sourceTree = "<group>"; };
+		11B3DFFA1ED41875007050B3 /* TT_Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TT_Reachability.m; sourceTree = "<group>"; };
 		11B3E0001ED41875007050B3 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
 		11B3E0011ED41875007050B3 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		11B3E0031ED41875007050B3 /* TTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMediator.h; sourceTree = "<group>"; };
@@ -293,6 +297,15 @@
 				1155BF5E1EEE8940007B09BF /* YYCGUtilities.m */,
 			);
 			path = YYUtils;
+			sourceTree = "<group>";
+		};
+		115626D01F21E87B00D5A8E0 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				115626D51F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h */,
+				115626D61F21E9B000D5A8E0 /* UIViewController+TTExt2Back.m */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		117335A41F0118B7003919D3 /* Constants */ = {
@@ -520,6 +533,7 @@
 				11B3DFED1ED41875007050B3 /* UITextField */,
 				11B3DFF01ED41875007050B3 /* UITextView */,
 				11B3DFF31ED41875007050B3 /* UIView */,
+				115626D01F21E87B00D5A8E0 /* UIViewController */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -716,8 +730,8 @@
 		11B3DFF81ED41875007050B3 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				11B3DFF91ED41875007050B3 /* Reachability.h */,
-				11B3DFFA1ED41875007050B3 /* Reachability.m */,
+				11B3DFF91ED41875007050B3 /* TT_Reachability.h */,
+				11B3DFFA1ED41875007050B3 /* TT_Reachability.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -761,8 +775,8 @@
 		11B3E00F1ED41875007050B3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				11B3E0101ED41875007050B3 /* AppInfoUtil */,
 				11B3E0151ED41875007050B3 /* TT_Utils_Header.h */,
+				11B3E0101ED41875007050B3 /* AppInfoUtil */,
 				11B3E0161ED41875007050B3 /* TTAlertUtil */,
 				11B3E0191ED41875007050B3 /* TTProgressHUD */,
 				11B3E0261ED41875007050B3 /* TTQRCodeUtil */,
@@ -865,6 +879,7 @@
 			files = (
 				11B3E07C1ED41875007050B3 /* UINavigationBar+TTExt2BGColor.h in Headers */,
 				119369571F09E449003285E2 /* NSDate+TTExt2InternetDate.h in Headers */,
+				115626D71F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h in Headers */,
 				11B3E09C1ED41875007050B3 /* AppInfoUtil.h in Headers */,
 				11B3E0551ED41875007050B3 /* NSString+TTExt2Frame.h in Headers */,
 				11B3E0881ED41875007050B3 /* UIView+TTExt.h in Headers */,
@@ -895,7 +910,7 @@
 				11B3E0591ED41875007050B3 /* NSUserDefaults+TTExt.h in Headers */,
 				118A682C1EE7868600DFCC13 /* NSString+TTExt2Hash.h in Headers */,
 				11B3E0861ED41875007050B3 /* UITextView+TTExt.h in Headers */,
-				11B3E08A1ED41875007050B3 /* Reachability.h in Headers */,
+				11B3E08A1ED41875007050B3 /* TT_Reachability.h in Headers */,
 				117335C61F01F574003919D3 /* TTFileAction.h in Headers */,
 				11B3E06E1ED41875007050B3 /* UIControl+TTExt.h in Headers */,
 				11B3E06A1ED41875007050B3 /* UIButton+TTExt2ImagePosition.h in Headers */,
@@ -1061,7 +1076,7 @@
 				11B3E09D1ED41875007050B3 /* AppInfoUtil.m in Sources */,
 				118A682D1EE7868600DFCC13 /* NSString+TTExt2Hash.m in Sources */,
 				11B3E0691ED41875007050B3 /* UIButton+TTExt2CountDown.m in Sources */,
-				11B3E08B1ED41875007050B3 /* Reachability.m in Sources */,
+				11B3E08B1ED41875007050B3 /* TT_Reachability.m in Sources */,
 				11B3E06F1ED41875007050B3 /* UIControl+TTExt.m in Sources */,
 				11B3E07F1ED41875007050B3 /* UINavigationController+TTExt.m in Sources */,
 				11B3E0791ED41875007050B3 /* UIImage+TTExt2Effect.m in Sources */,
@@ -1090,6 +1105,7 @@
 				11C0BEB61F050B38004FC175 /* TTScanBoxLine.m in Sources */,
 				11B3E0891ED41875007050B3 /* UIView+TTExt.m in Sources */,
 				117335C51F01F574003919D3 /* TTAPIClient.m in Sources */,
+				115626D81F21E9B000D5A8E0 /* UIViewController+TTExt2Back.m in Sources */,
 				11B3E0911ED41875007050B3 /* BaseService.m in Sources */,
 				11B3E0581ED41875007050B3 /* NSTimer+TTExt.m in Sources */,
 				1155BF601EEE8940007B09BF /* YYCGUtilities.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import <AFNetworking/AFHTTPSessionManager.h>
-#import "Reachability.h"
+#import "TT_Reachability.h"
 
 @interface TTAPIClient : AFHTTPSessionManager
 

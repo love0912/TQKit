@@ -10,9 +10,9 @@
 
 @interface TTAPIClient ()
 
-@property (nonatomic, strong) Reachability *reach;
+@property (nonatomic, strong) TT_Reachability *reach;
 
-@property (nonatomic, strong) Reachability *internetReachability;
+@property (nonatomic, strong) TT_Reachability *internetReachability;
 
 @end
 
@@ -41,7 +41,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
     self.requestSerializer                         = [AFHTTPRequestSerializer serializer];
 //    self.responseSerializer                        = [AFJSONResponseSerializer serializer];
     self.requestSerializer.timeoutInterval         = 10.0;
-    self.reach = [Reachability reachabilityWithHostName:AFAppDotNetAPIBaseURLString];
+    self.reach = [TT_Reachability reachabilityWithHostName:AFAppDotNetAPIBaseURLString];
     //    self.securityPolicy = [self customSecurityPolicy];
     return self;
 }
@@ -72,13 +72,13 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
 }
 
 - (void)reachabilityChanged:(NSNotification *)notification {
-    Reachability* curReach = [notification object];
-    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    TT_Reachability* curReach = [notification object];
+    NSParameterAssert([curReach isKindOfClass:[TT_Reachability class]]);
     [self reachability:curReach];
 }
 
 #pragma mark - private
-- (void)reachability:(Reachability *)reachability
+- (void)reachability:(TT_Reachability *)reachability
 {
     NetworkStatus netStatus = [reachability currentReachabilityStatus];
     BOOL connectionRequired = [reachability connectionRequired];
@@ -138,7 +138,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
     _isDetectNetwork = isDetectNetwork;
     if (isDetectNetwork) {
         if (_internetReachability == nil) {
-            _internetReachability = [Reachability reachabilityForInternetConnection];
+            _internetReachability = [TT_Reachability reachabilityForInternetConnection];
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(reachabilityChanged:)
                                                          name:kReachabilityChangedNotification

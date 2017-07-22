@@ -48,5 +48,10 @@
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 #define WEAK(weaks,s)  __weak __typeof(&*s)weaks = s;
 
+/**
+ 设置过期提醒
+ */
+#define TTKitDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
+
 
 #endif /* TT_Define_App_h */

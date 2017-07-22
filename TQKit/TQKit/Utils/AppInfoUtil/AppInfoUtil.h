@@ -159,4 +159,18 @@ typedef void(^GrantBlock)(BOOL granted);
  */
 + (NSString *)getCurrentWifiSSID;
 
+/**
+ 设置浅色状态栏
+ 字体为白色
+ info.plist 中 设置 UIViewControllerBasedStatusBarAppearance 为 NO
+ */
++ (void)setStatusBarLight;
+
+/**
+ 设置默认状态栏
+ 字体为黑色
+ info.plist 中 设置 UIViewControllerBasedStatusBarAppearance 为 NO
+ */
++ (void)setStatusBarDefault;
+
 @end
