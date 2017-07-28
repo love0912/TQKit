@@ -28,6 +28,8 @@ typedef void(^Result3rdBlock)(NSObject *data, NSError *error);
 
 @interface TTHttpAction : NSObject
 
+@property (nonatomic, strong) TTAPIClient *apiClient;
+
 + (instancetype)sharedHttpAction;
 
 - (BOOL)isReachable;
@@ -132,4 +134,5 @@ typedef void(^Result3rdBlock)(NSObject *data, NSError *error);
  @return value
  */
 - (NSString *)valueForHTTPHeaderField:(NSString *)field;
+
 @end

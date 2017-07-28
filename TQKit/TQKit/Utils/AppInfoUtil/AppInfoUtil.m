@@ -421,4 +421,28 @@
     return @"";
 }
 
+/**
+ 设置浅色状态栏
+ 字体为白色
+ info.plist 中 设置 UIViewControllerBasedStatusBarAppearance 为 NO
+ */
++ (void)setStatusBarLight {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+#pragma clang diagnostic pop
+}
+
+/**
+ 设置默认状态栏
+ 字体为黑色
+ info.plist 中 设置 UIViewControllerBasedStatusBarAppearance 为 NO
+ */
++ (void)setStatusBarDefault {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+#pragma clang diagnostic pop
+}
+
 @end

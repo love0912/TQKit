@@ -22,8 +22,6 @@ typedef enum : NSUInteger {
 @interface TTHttpAction ()
 @property (nonatomic, strong) NSMutableArray *arr_sessionTask;
 
-@property (nonatomic, strong) TTAPIClient *apiClient;
-
 @property (nonatomic, strong) YYCache *cache;
 
 @property (nonatomic, strong) TTConstants *ttConstants;
@@ -210,7 +208,6 @@ static NSString *TTCacheName = @"TTAPICache";
 - (NSString *)valueForHTTPHeaderField:(NSString *)field {
     return [_apiClient.requestSerializer valueForHTTPHeaderField:field];
 }
-
 
 #pragma mark - private
 /**
