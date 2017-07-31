@@ -17,14 +17,14 @@
  *  @param data    返回数据 nil 为空
  *  @param errMsg     错误描述
  */
-typedef void(^ResultBlock)(NSInteger errCode, NSObject *data, NSString *errMsg);
+typedef void(^ResultBlock)(NSInteger errCode, id data, NSString *errMsg);
 
 /**
  1.1.4新增 -- 第三方接口获取的数据，不判断返回值，直接返回接口的数据
 
  @param data 接口返回的数据
  */
-typedef void(^Result3rdBlock)(NSObject *data, NSError *error);
+typedef void(^Result3rdBlock)(id data, NSError *error);
 
 @interface TTHttpAction : NSObject
 
