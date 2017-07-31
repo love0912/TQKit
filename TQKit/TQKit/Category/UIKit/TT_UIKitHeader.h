@@ -15,6 +15,7 @@
 #import "UIButton+TTExt.h"
 #import "UIButton+TTExt2CountDown.h"
 #import "UIButton+TTExt2ImagePosition.h"
+#import "UIButton+TTExt2Layer.h"
 #import "UIColor+TTExt.h"
 #import "UIControl+TTExt.h"
 #import "UIDevice+TTExt.h"

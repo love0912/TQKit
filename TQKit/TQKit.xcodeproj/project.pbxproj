@@ -24,6 +24,8 @@
 		117335C91F01F574003919D3 /* TTHttpAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 117335C11F01F574003919D3 /* TTHttpAction.m */; };
 		117D11191EF8B83100303F8D /* NSString+TTExt2Vertify.h in Headers */ = {isa = PBXBuildFile; fileRef = 117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */; };
 		117D111A1EF8B83100303F8D /* NSString+TTExt2Vertify.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */; };
+		11818BE61F2ED9DD0067A062 /* UIButton+TTExt2Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 11818BE41F2ED9DD0067A062 /* UIButton+TTExt2Layer.h */; };
+		11818BE71F2ED9DD0067A062 /* UIButton+TTExt2Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11818BE51F2ED9DD0067A062 /* UIButton+TTExt2Layer.m */; };
 		11829F771F024F2C002F4F7E /* Doc in Resources */ = {isa = PBXBuildFile; fileRef = 11829F6F1F024F2C002F4F7E /* Doc */; };
 		11829F781F024F2C002F4F7E /* TTBanner_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11829F701F024F2C002F4F7E /* TTBanner_arrow@2x.png */; };
 		11829F791F024F2C002F4F7E /* TTBannerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 11829F711F024F2C002F4F7E /* TTBannerCell.h */; };
@@ -157,6 +159,8 @@
 		117335C11F01F574003919D3 /* TTHttpAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHttpAction.m; sourceTree = "<group>"; };
 		117D11171EF8B83100303F8D /* NSString+TTExt2Vertify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTExt2Vertify.h"; sourceTree = "<group>"; };
 		117D11181EF8B83100303F8D /* NSString+TTExt2Vertify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTExt2Vertify.m"; sourceTree = "<group>"; };
+		11818BE41F2ED9DD0067A062 /* UIButton+TTExt2Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TTExt2Layer.h"; sourceTree = "<group>"; };
+		11818BE51F2ED9DD0067A062 /* UIButton+TTExt2Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TTExt2Layer.m"; sourceTree = "<group>"; };
 		11829F6F1F024F2C002F4F7E /* Doc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doc; sourceTree = "<group>"; };
 		11829F701F024F2C002F4F7E /* TTBanner_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TTBanner_arrow@2x.png"; sourceTree = "<group>"; };
 		11829F711F024F2C002F4F7E /* TTBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBannerCell.h; sourceTree = "<group>"; };
@@ -574,6 +578,8 @@
 				11B3DFC71ED41875007050B3 /* UIButton+TTExt2CountDown.m */,
 				11B3DFC81ED41875007050B3 /* UIButton+TTExt2ImagePosition.h */,
 				11B3DFC91ED41875007050B3 /* UIButton+TTExt2ImagePosition.m */,
+				11818BE41F2ED9DD0067A062 /* UIButton+TTExt2Layer.h */,
+				11818BE51F2ED9DD0067A062 /* UIButton+TTExt2Layer.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -882,6 +888,7 @@
 				115626D71F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h in Headers */,
 				11B3E09C1ED41875007050B3 /* AppInfoUtil.h in Headers */,
 				11B3E0551ED41875007050B3 /* NSString+TTExt2Frame.h in Headers */,
+				11818BE61F2ED9DD0067A062 /* UIButton+TTExt2Layer.h in Headers */,
 				11B3E0881ED41875007050B3 /* UIView+TTExt.h in Headers */,
 				11B3E0721ED41875007050B3 /* UIFont+TTExt.h in Headers */,
 				11B3E0741ED41875007050B3 /* UIGestureRecognizer+TTExt.h in Headers */,
@@ -1084,6 +1091,7 @@
 				11B3E0951ED41875007050B3 /* UIViewController+TTExt2Parameter.m in Sources */,
 				11B3E0481ED41875007050B3 /* NSDate+TTExt.m in Sources */,
 				11829F7E1F024F2C002F4F7E /* TTBannerView.m in Sources */,
+				11818BE71F2ED9DD0067A062 /* UIButton+TTExt2Layer.m in Sources */,
 				119369581F09E449003285E2 /* NSDate+TTExt2InternetDate.m in Sources */,
 				11B3E05D1ED41875007050B3 /* CALayer+TTExt.m in Sources */,
 				118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */,

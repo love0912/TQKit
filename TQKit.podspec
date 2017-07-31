@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TQKit"
-  s.version      = "1.1.17"
+  s.version      = "1.2.0"
   s.summary      = "TQKit is iOS TQ Project"
   s.description  = <<-DESC
 		新增去除字符串所有空格的方法，新增获取网络时间的方法
