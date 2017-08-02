@@ -328,7 +328,7 @@
     NSComparisonResult compare = [[UIDevice currentDevice].systemVersion compare:@"10.0"];
     if (compare == NSOrderedDescending || compare == NSOrderedSame) {
         /// 大于等于10.0系统使用此openURL方法
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str] options:@{} completionHandler:nil];
     } else {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"

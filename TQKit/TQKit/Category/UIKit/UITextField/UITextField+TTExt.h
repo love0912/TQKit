@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIColor *tt_placeholderColor;
 
+
+/**
+ 去掉两端空格和换行符的值
+ */
+@property (nonatomic, strong, readonly) NSString *tt_text;
+
 @end
 
 NS_ASSUME_NONNULL_END

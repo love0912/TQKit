@@ -23,18 +23,19 @@
                 //设置界面的按钮显示 根据自己需求设置
                 [self setTitle:tittle forState:UIControlStateNormal];
                 self.userInteractionEnabled = YES;
+                self.enabled = YES;
             });
         }else{
             //            int minutes = timeout / 60;
-            int seconds = timeOut % 60;
+//            int seconds = timeOut % 60;
             
-            NSString *strTime = [NSString stringWithFormat:@"%.2d", seconds];
+            NSString *strTime = [NSString stringWithFormat:@"%.2d", (int)timeOut];
             dispatch_async(dispatch_get_main_queue(), ^{
                 //设置界面的按钮显示 根据自己需求设置
                 NSLog(@"____%@",strTime);
                 [self setTitle:[NSString stringWithFormat:@"%@%@",strTime,waitTittle] forState:UIControlStateNormal];
                 self.userInteractionEnabled = NO;
-                
+                self.enabled = NO;
             });
             
             timeOut--;

@@ -32,5 +32,8 @@ static NSString * const PlaceholderColorKeyPath = @"placeholderLabel.textColor";
     return [self valueForKeyPath:PlaceholderColorKeyPath];
 }
 
+- (NSString *)tt_text {
+    return [self.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
 
 @end
