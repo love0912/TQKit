@@ -100,6 +100,11 @@ typedef void(^TouchUpInsideEvent)(UIButton *button);
  */
 - (void)tt_setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
 
+/**
+ 设置下划线,颜色跟按钮颜色一致
+ */
+- (void)tt_setUnderLine;
+
 #pragma mark - 点击热区
 
 /**

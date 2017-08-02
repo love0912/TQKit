@@ -126,6 +126,18 @@ static const NSString *kTouchUpInsideEvent;
     [self setBackgroundImage:[UIButton imageWithColor:backgroundColor] forState:state];
 }
 
+/**
+ 设置下划线,颜色跟按钮颜色一致
+ */
+- (void)tt_setUnderLine {
+    NSString *btnTitle = [self titleForState:UIControlStateNormal];
+    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:btnTitle];
+    NSRange titleRange = {0,[title length]};
+    [title addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:titleRange];
+    [title addAttribute:NSForegroundColorAttributeName value:[self titleColorForState:UIControlStateNormal] range:titleRange];
+    [self setAttributedTitle:title
+                                 forState:UIControlStateNormal];
+}
 
 #pragma mark - 点击热区
 - (UIEdgeInsets)tt_touchAreaInsets
