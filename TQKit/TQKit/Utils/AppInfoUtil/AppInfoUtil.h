@@ -173,4 +173,9 @@ typedef void(^GrantBlock)(BOOL granted);
  */
 + (void)setStatusBarDefault;
 
+/**
+ 跳转到App设置页面
+ */
++ (void)jumpToAppSettingView;
+
 @end

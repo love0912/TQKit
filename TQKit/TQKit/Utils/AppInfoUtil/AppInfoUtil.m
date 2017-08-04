@@ -129,16 +129,17 @@
  定位权限是否开启
  */
 + (BOOL)isOpenAccessToLocationData {
-    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusNotDetermined||[CLLocationManager authorizationStatus]==kCLAuthorizationStatusRestricted||[CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied) {
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if (status==kCLAuthorizationStatusNotDetermined||status==kCLAuthorizationStatusRestricted||status==kCLAuthorizationStatusDenied) {
         return NO;
     }
 #if __IPHONE_8_0
 #else
-    if ([CLLocationManager authorizationStatus]==kCLAuthorizationStatusAuthorized)
+    if (status==kCLAuthorizationStatusAuthorized)
         return YES;
 #endif
     
-    return NO;
+    return YES;
 }
 
 /**
@@ -443,6 +444,23 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 #pragma clang diagnostic pop
+}
+
+/**
+ 跳转到App设置页面
+ */
++ (void)jumpToAppSettingView {
+    NSURL *jumpUrl = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    NSComparisonResult compare = [[UIDevice currentDevice].systemVersion compare:@"10.0"];
+    if (compare == NSOrderedDescending || compare == NSOrderedSame) {
+        /// 大于等于10.0系统使用此openURL方法
+        [[UIApplication sharedApplication] openURL:jumpUrl options:@{} completionHandler:nil];
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [[UIApplication sharedApplication] openURL:jumpUrl];
+#pragma clang diagnostic pop
+    }
 }
 
 @end

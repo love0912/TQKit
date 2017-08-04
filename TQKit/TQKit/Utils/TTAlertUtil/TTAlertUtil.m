@@ -88,7 +88,7 @@ const char *TTAlertSheet_Block = "TTAlertSheet_Block";
 
 
 #pragma mark - actionSheet
-+ (void)showActionSheetWithTitle:(NSString*)title message:(NSString *)messge cancleButtonTitle:(NSString *)cancleButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle OtherButtonsArray:(NSArray*)otherButtons showInController:(UIViewController *)controller clickAtIndex:(ClickAtIndexBlock) clickAtIndex {
++ (UIAlertController *)showActionSheetWithTitle:(NSString*)title message:(NSString *)messge cancleButtonTitle:(NSString *)cancleButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle OtherButtonsArray:(NSArray*)otherButtons showInController:(UIViewController *)controller clickAtIndex:(ClickAtIndexBlock) clickAtIndex {
     
     if (JIOS8Later && controller != nil) {
         int index = 0;
@@ -100,10 +100,12 @@ const char *TTAlertSheet_Block = "TTAlertSheet_Block";
             [alert addAction:destructive];
         }
         index++;
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:cancleButtonTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            clickAtIndex(index);
-        }];
-        [alert addAction:cancel];
+        if ([cancleButtonTitle tt_isNotEmpty]) {
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:cancleButtonTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                clickAtIndex(index);
+            }];
+            [alert addAction:cancel];
+        }
         for (NSString *otherTitle in otherButtons) {
             index ++;
             UIAlertAction *action = [UIAlertAction actionWithTitle:otherTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -112,6 +114,7 @@ const char *TTAlertSheet_Block = "TTAlertSheet_Block";
             [alert addAction:action];
         }
         [controller presentViewController:alert animated:YES completion:nil];
+        return alert;
     } else {
         UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:title delegate:[self self] cancelButtonTitle:cancleButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:nil];
         alert.clickBlock = clickAtIndex;
@@ -123,6 +126,7 @@ const char *TTAlertSheet_Block = "TTAlertSheet_Block";
         } else {
             [alert showInView:[UIApplication sharedApplication].keyWindow];
         }
+        return nil;
     }
 }
 
