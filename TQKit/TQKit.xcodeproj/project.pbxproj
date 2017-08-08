@@ -35,6 +35,8 @@
 		11829F7D1F024F2C002F4F7E /* TTBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11829F751F024F2C002F4F7E /* TTBannerView.h */; };
 		11829F7E1F024F2C002F4F7E /* TTBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11829F761F024F2C002F4F7E /* TTBannerView.m */; };
 		11829F801F025B07002F4F7E /* TT_ComponetHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 11829F7F1F025B07002F4F7E /* TT_ComponetHeader.h */; };
+		1187DA701F372A7C00FFD506 /* UIView+TTExt2TouchArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 1187DA6E1F372A7C00FFD506 /* UIView+TTExt2TouchArea.h */; };
+		1187DA711F372A7C00FFD506 /* UIView+TTExt2TouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 1187DA6F1F372A7C00FFD506 /* UIView+TTExt2TouchArea.m */; };
 		118A68261EE7838300DFCC13 /* NSData+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 118A68241EE7838300DFCC13 /* NSData+TTExt.h */; };
 		118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 118A68251EE7838300DFCC13 /* NSData+TTExt.m */; };
 		118A68291EE7861A00DFCC13 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118A68281EE7861A00DFCC13 /* libz.tbd */; };
@@ -170,6 +172,8 @@
 		11829F751F024F2C002F4F7E /* TTBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBannerView.h; sourceTree = "<group>"; };
 		11829F761F024F2C002F4F7E /* TTBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBannerView.m; sourceTree = "<group>"; };
 		11829F7F1F025B07002F4F7E /* TT_ComponetHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TT_ComponetHeader.h; sourceTree = "<group>"; };
+		1187DA6E1F372A7C00FFD506 /* UIView+TTExt2TouchArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTExt2TouchArea.h"; sourceTree = "<group>"; };
+		1187DA6F1F372A7C00FFD506 /* UIView+TTExt2TouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTExt2TouchArea.m"; sourceTree = "<group>"; };
 		118A68241EE7838300DFCC13 /* NSData+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TTExt.h"; sourceTree = "<group>"; };
 		118A68251EE7838300DFCC13 /* NSData+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+TTExt.m"; sourceTree = "<group>"; };
 		118A68281EE7861A00DFCC13 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -708,6 +712,8 @@
 			children = (
 				11B3DFF41ED41875007050B3 /* UIView+TTExt.h */,
 				11B3DFF51ED41875007050B3 /* UIView+TTExt.m */,
+				1187DA6E1F372A7C00FFD506 /* UIView+TTExt2TouchArea.h */,
+				1187DA6F1F372A7C00FFD506 /* UIView+TTExt2TouchArea.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -884,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11B3E07C1ED41875007050B3 /* UINavigationBar+TTExt2BGColor.h in Headers */,
+				1187DA701F372A7C00FFD506 /* UIView+TTExt2TouchArea.h in Headers */,
 				119369571F09E449003285E2 /* NSDate+TTExt2InternetDate.h in Headers */,
 				115626D71F21E9B000D5A8E0 /* UIViewController+TTExt2Back.h in Headers */,
 				11B3E09C1ED41875007050B3 /* AppInfoUtil.h in Headers */,
@@ -1074,6 +1081,7 @@
 				11B3E0611ED41875007050B3 /* UIApplication+TTExt.m in Sources */,
 				11B3E0A01ED41875007050B3 /* TTAlertUtil.m in Sources */,
 				11B3E04C1ED41875007050B3 /* NSDictionary+TTExt.m in Sources */,
+				1187DA711F372A7C00FFD506 /* UIView+TTExt2TouchArea.m in Sources */,
 				11B3E0671ED41875007050B3 /* UIButton+TTExt.m in Sources */,
 				11B3E0AF1ED41875007050B3 /* TTDataSource.m in Sources */,
 				117335C91F01F574003919D3 /* TTHttpAction.m in Sources */,

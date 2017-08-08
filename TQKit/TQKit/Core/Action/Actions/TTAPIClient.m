@@ -40,7 +40,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
     // [self.requestSerializer setAuthorizationHeaderFieldWithUsername:@"XYZ" password:@"xyzzzz"];
     self.requestSerializer                         = [AFHTTPRequestSerializer serializer];
 //    self.responseSerializer                        = [AFJSONResponseSerializer serializer];
-    self.requestSerializer.timeoutInterval         = 10.0;
+    self.requestSerializer.timeoutInterval         = 30.0;
     self.reach = [TT_Reachability reachabilityWithHostName:AFAppDotNetAPIBaseURLString];
     //    self.securityPolicy = [self customSecurityPolicy];
     return self;

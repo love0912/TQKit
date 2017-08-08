@@ -21,6 +21,13 @@
 + (void)showInfoTips:(NSString *)tips;
 
 /**
+ 信息提示 -- 无图标
+
+ @param tips 信息
+ */
++ (void)showBlankInfoTips:(NSString *)tips;
+
+/**
  信息提示 -- 浅色背景
  
  @param tips 信息

@@ -21,6 +21,19 @@
 }
 
 /**
+ 信息提示 -- 无图标
+ 
+ @param tips 信息
+ */
++ (void)showBlankInfoTips:(NSString *)tips {
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleLight];
+    [SVProgressHUD setInfoImage:nil];
+    [SVProgressHUD showInfoWithStatus:tips];
+    [SVProgressHUD dismissWithDelay:TTProgressDismissSeconds];
+}
+
+/**
  信息提示 -- 浅色背景
 
  @param tips 信息
@@ -47,7 +60,7 @@
  @param image 提示图片，nil则为默认图片
  */
 + (void)showInfoTips:(NSString *)tips delay:(float)delay infoImage:(UIImage *)image {
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     if (image) {
         [SVProgressHUD setInfoImage:image];
@@ -64,7 +77,7 @@
  @param image 提示图片，nil则为默认图片
  */
 + (void)showLightInfoTips:(NSString *)tips delay:(float)delay infoImage:(UIImage *)image {
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleLight];
     [SVProgressHUD setInfoImage:image];
     [SVProgressHUD showInfoWithStatus:tips];
@@ -87,7 +100,7 @@
  @param delay 延迟几秒取消
  */
 + (void)showSuccessTips:(NSString *)tips withDismissDelay:(float)delay {
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD showSuccessWithStatus:tips];
     [SVProgressHUD dismissWithDelay:delay];
@@ -112,7 +125,7 @@
  @param delay 延迟几秒取消
  */
 + (void)showErrorTips:(NSString *)tips withDismissDelay:(float)delay {
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD showErrorWithStatus:tips];
     [SVProgressHUD dismissWithDelay:delay];
@@ -134,7 +147,7 @@
  @param tips 提示语
  */
 + (void)showFlatLoadingWithTips:(NSString *)tips {
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
     [SVProgressHUD showWithStatus:tips];
@@ -154,7 +167,7 @@
  @param tips 提示语
  */
 + (void)showNativeLoadingWithTips:(NSString *)tips {
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
     [SVProgressHUD showWithStatus:tips];

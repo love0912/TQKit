@@ -31,6 +31,7 @@
 #import "UITextField+TTExt.h"
 #import "UITextView+TTExt.h"
 #import "UIView+TTExt.h"
+#import "UIView+TTExt2TouchArea.h"
 #import "UIViewController+TTExt2Back.h"
 
 
