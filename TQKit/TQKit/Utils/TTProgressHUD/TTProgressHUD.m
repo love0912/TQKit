@@ -104,9 +104,6 @@
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD showSuccessWithStatus:tips];
     [SVProgressHUD dismissWithDelay:delay];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [SVProgressHUD dismiss];
-//    });
 }
 
 /**
@@ -129,9 +126,6 @@
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD showErrorWithStatus:tips];
     [SVProgressHUD dismissWithDelay:delay];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [SVProgressHUD dismiss];
-//    });
 }
 
 /**
