@@ -10,8 +10,6 @@
 #import "TTAPIClient.h"
 #import "TTConstants.h"
 #import "TT_Define_App.h"
-@class BaseService;
-
 
 /**
  *  HTTP访问回调
@@ -24,7 +22,7 @@ typedef void(^ResultBlock)(NSInteger errCode, id data, NSString *errMsg);
 
 /**
  1.1.4新增 -- 第三方接口获取的数据，不判断返回值，直接返回接口的数据
-
+ 
  @param data 接口返回的数据
  */
 typedef void(^Result3rdBlock)(id data, NSError *error);
@@ -33,12 +31,22 @@ typedef void(^Result3rdBlock)(id data, NSError *error);
 
 @property (nonatomic, strong) TTAPIClient *apiClient;
 
-@property (nonatomic, weak) BaseService *service;
 
++ (instancetype)sharedHttpAction TTKitDeprecated("2.0后废弃，使用sharedHttpActionWithService:方法，新增对每个接口Key值的控制");
 
-+ (instancetype)sharedHttpAction TTKitDeprecated("2.0过期提醒，使用sharedHttpActionWithService:方法，新增对每个接口Key值的控制");
-
-+ (instancetype)sharedHttpActionWithService:(BaseService *)service;
+/**
+ 2.0新增初始化
+ 
+ @param apiCodeSuccess 服务器正确的返回码
+ @param apiReturnCodeKey 返回码的Key
+ @param apiReturnDataKey 返回内容的Key
+ @param apiReturnMsgKey 返回提示信息的Key
+ @return 回调
+ */
++ (instancetype)sharedHttpActionByApiReturnCodeSuccess:(NSInteger)apiCodeSuccess
+                                               codeKey:(NSString *)apiReturnCodeKey
+                                               dataKey:(NSString *)apiReturnDataKey
+                                                msgKey:(NSString *)apiReturnMsgKey;
 
 - (BOOL)isReachable;
 
@@ -99,7 +107,7 @@ typedef void(^Result3rdBlock)(id data, NSError *error);
 
 /**
  获取html代码
-
+ 
  @param URLString html连接
  @param requestBlock 回调函数
  */

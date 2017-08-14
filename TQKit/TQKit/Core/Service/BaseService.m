@@ -19,7 +19,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _httpAction = [TTHttpAction sharedHttpActionWithService:self];
+        _httpAction = [TTHttpAction sharedHttpActionByApiReturnCodeSuccess:self.apiReturnCodeSuccess codeKey:self.apiReturnCodeKey dataKey:self.apiReturnDataKey msgKey:self.apiReturnMsgKey];
         _fileAction = [TTFileAction sharedFileAction];
     }
     return self;

@@ -12,7 +12,8 @@
 #import "TT_CategoryHeader.h"
 #import "YYCache.h"
 #import <math.h>
-#import "BaseService.h"
+
+#define ErrorCode -9999
 
 
 typedef enum : NSUInteger {
@@ -26,6 +27,14 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) YYCache *cache;
 
 @property (nonatomic, strong) TTConstants *ttConstants;
+
+@property (nonatomic, assign) NSInteger apiReturnCodeSuccess;
+
+@property (nonatomic, strong) NSString *apiReturnCodeKey;
+
+@property (nonatomic, strong) NSString *apiReturnDataKey;
+
+@property (nonatomic, strong) NSString *apiReturnMsgKey;
 
 @end
 
@@ -42,9 +51,24 @@ static NSString *TTCacheName = @"TTAPICache";
     return _sharedAction;
 }
 
-+ (instancetype)sharedHttpActionWithService:(BaseService *)service {
+/**
+ 2.0新增初始化
+ 
+ @param apiCodeSuccess 服务器正确的返回码
+ @param apiReturnCodeKey 返回码的Key
+ @param apiReturnDataKey 返回内容的Key
+ @param apiReturnMsgKey 返回提示信息的Key
+ @return 回调
+ */
++ (instancetype)sharedHttpActionByApiReturnCodeSuccess:(NSInteger)apiCodeSuccess
+                                               codeKey:(NSString *)apiReturnCodeKey
+                                               dataKey:(NSString *)apiReturnDataKey
+                                                msgKey:(NSString *)apiReturnMsgKey {
     TTHttpAction *httpAction = [[TTHttpAction alloc] init];
-    httpAction.service = service;
+    httpAction.apiReturnCodeSuccess = apiCodeSuccess;
+    httpAction.apiReturnCodeKey = [apiReturnCodeKey tt_isNotEmpty] ? apiReturnCodeKey : [TTConstants sharedInstance].apiReturnCode;
+    httpAction.apiReturnDataKey = [apiReturnDataKey tt_isNotEmpty] ? apiReturnDataKey : [TTConstants sharedInstance].apiReturnData;
+    httpAction.apiReturnMsgKey = [apiReturnMsgKey tt_isNotEmpty] ? apiReturnMsgKey : [TTConstants sharedInstance].apiReturnMsg;
     return httpAction;
 }
 
@@ -146,7 +170,7 @@ static NSString *TTCacheName = @"TTAPICache";
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (requestBlock) {
             NSString *dataString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-            requestBlock(_service.apiReturnCodeSuccess, dataString, nil);
+            requestBlock(_apiReturnCodeSuccess, dataString, nil);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self failResponseError:error result:requestBlock isShowHUD:NO];
@@ -232,11 +256,11 @@ static NSString *TTCacheName = @"TTAPICache";
             [TTProgressHUD showFlatLoading];
         }
 #warning 缓存策略，还需更加精细,暂时注释
-//        NSString *cache_key = [self cacheKeyWithUrlString:URLString parameters:parameters];
-//        id data = [_cache objectForKey:cache_key];
-//        if (data) {
-//            requestBlock([data[APIReturnCode] integerValue], data[APIReturnData], nil);
-//        }
+        //        NSString *cache_key = [self cacheKeyWithUrlString:URLString parameters:parameters];
+        //        id data = [_cache objectForKey:cache_key];
+        //        if (data) {
+        //            requestBlock([data[APIReturnCode] integerValue], data[APIReturnData], nil);
+        //        }
         NSURLSessionDataTask *task = nil;
         if (methodType == Http_Post) {
             task = [self postWithUrlString:URLString parameters:parameters result:requestBlock isShowHUD:isShowHUD];
@@ -292,7 +316,11 @@ static NSString *TTCacheName = @"TTAPICache";
     }
     [_cache setObject:responseObject forKey:key];
     if (requestBlock) {
-        requestBlock([responseObject[_service.apiReturnCodeKey] integerValue], responseObject[_service.apiReturnDataKey], responseObject[_service.apiReturnMsgKey]);
+        if ([responseObject tt_containsObjectForKey:_apiReturnCodeKey]) {
+            requestBlock([responseObject[_apiReturnCodeKey] integerValue], responseObject[_apiReturnDataKey], responseObject[_apiReturnMsgKey]);
+        } else {
+            requestBlock(ErrorCode, nil, @"ErrorCode配置错误");
+        }
     }
 }
 
@@ -331,7 +359,7 @@ static NSString *TTCacheName = @"TTAPICache";
  对签名字符串进行md5加密
  对加密过后的字符在第m位插入n位随机字符串进行加盐。
  进行url编码，添加参数到header，参数名为TQSignature
-
+ 
  @param parameter 参数
  @return 签名
  */
@@ -346,7 +374,7 @@ static NSString *TTCacheName = @"TTAPICache";
     } else {
         [signature appendString:urlString];
     }
-
+    
     //如果登录 ，加上用户名和密码
     if ([NSUserDefaults tt_objectForKey:_ttConstants.signLoginNameKey] != nil) {
         [signature appendString:[NSUserDefaults tt_objectForKey:_ttConstants.signLoginNameKey]];
@@ -373,7 +401,7 @@ static NSString *TTCacheName = @"TTAPICache";
 
 /**
  生成随机字符串
-
+ 
  @param len 长度
  @return 字符串
  */
@@ -398,10 +426,6 @@ static NSString *TTCacheName = @"TTAPICache";
         _arr_sessionTask = [NSMutableArray arrayWithCapacity:0];
     }
     return _arr_sessionTask;
-}
-
-- (void)dealloc {
-    _service = nil;
 }
 
 @end
