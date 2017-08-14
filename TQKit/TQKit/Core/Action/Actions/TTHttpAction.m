@@ -14,6 +14,7 @@
 #import <math.h>
 
 #define ErrorCode -9999
+#define ErrorCodeMsg @"ErrorCode配置错误"
 
 
 typedef enum : NSUInteger {
@@ -319,7 +320,7 @@ static NSString *TTCacheName = @"TTAPICache";
         if ([responseObject tt_containsObjectForKey:_apiReturnCodeKey]) {
             requestBlock([responseObject[_apiReturnCodeKey] integerValue], responseObject[_apiReturnDataKey], responseObject[_apiReturnMsgKey]);
         } else {
-            requestBlock(ErrorCode, nil, @"ErrorCode配置错误");
+            requestBlock(ErrorCode, nil, ErrorCodeMsg);
         }
     }
 }
