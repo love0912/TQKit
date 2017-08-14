@@ -12,6 +12,7 @@
 #import "TT_CategoryHeader.h"
 #import "YYCache.h"
 #import <math.h>
+#import "BaseService.h"
 
 
 typedef enum : NSUInteger {
@@ -39,6 +40,12 @@ static NSString *TTCacheName = @"TTAPICache";
         _sharedAction = [[TTHttpAction alloc] init];
     });
     return _sharedAction;
+}
+
++ (instancetype)sharedHttpActionWithService:(BaseService *)service {
+    TTHttpAction *httpAction = [[TTHttpAction alloc] init];
+    httpAction.service = service;
+    return httpAction;
 }
 
 - (instancetype)init {
@@ -139,7 +146,7 @@ static NSString *TTCacheName = @"TTAPICache";
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (requestBlock) {
             NSString *dataString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-            requestBlock(_ttConstants.apiReturnCodeSuccess, dataString, nil);
+            requestBlock(_service.apiReturnCodeSuccess, dataString, nil);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self failResponseError:error result:requestBlock isShowHUD:NO];
@@ -285,7 +292,7 @@ static NSString *TTCacheName = @"TTAPICache";
     }
     [_cache setObject:responseObject forKey:key];
     if (requestBlock) {
-        requestBlock([responseObject[_ttConstants.apiReturnCode] integerValue], responseObject[_ttConstants.apiReturnData], responseObject[_ttConstants.apiReturnMsg]);
+        requestBlock([responseObject[_service.apiReturnCodeKey] integerValue], responseObject[_service.apiReturnDataKey], responseObject[_service.apiReturnMsgKey]);
     }
 }
 
@@ -391,6 +398,10 @@ static NSString *TTCacheName = @"TTAPICache";
         _arr_sessionTask = [NSMutableArray arrayWithCapacity:0];
     }
     return _arr_sessionTask;
+}
+
+- (void)dealloc {
+    _service = nil;
 }
 
 @end

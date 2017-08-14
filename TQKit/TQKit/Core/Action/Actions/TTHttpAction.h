@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "TTAPIClient.h"
 #import "TTConstants.h"
+#import "TT_Define_App.h"
+@class BaseService;
+
 
 /**
  *  HTTP访问回调
@@ -30,7 +33,12 @@ typedef void(^Result3rdBlock)(id data, NSError *error);
 
 @property (nonatomic, strong) TTAPIClient *apiClient;
 
-+ (instancetype)sharedHttpAction;
+@property (nonatomic, weak) BaseService *service;
+
+
++ (instancetype)sharedHttpAction TTKitDeprecated("2.0过期提醒，使用sharedHttpActionWithService:方法，新增对每个接口Key值的控制");
+
++ (instancetype)sharedHttpActionWithService:(BaseService *)service;
 
 - (BOOL)isReachable;
 

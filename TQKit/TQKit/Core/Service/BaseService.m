@@ -19,7 +19,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _httpAction = [TTHttpAction sharedHttpAction];
+        _httpAction = [TTHttpAction sharedHttpActionWithService:self];
         _fileAction = [TTFileAction sharedFileAction];
     }
     return self;
@@ -29,4 +29,15 @@
     return [TTConstants sharedInstance].apiReturnCodeSuccess;
 }
 
+- (NSString *)apiReturnCodeKey {
+    return [TTConstants sharedInstance].apiReturnCode;
+}
+
+- (NSString *)apiReturnDataKey {
+    return [TTConstants sharedInstance].apiReturnData;
+}
+
+- (NSString *)apiReturnMsgKey {
+    return [TTConstants sharedInstance].apiReturnMsg;
+}
 @end
