@@ -12,10 +12,10 @@
 
 
 typedef enum : NSInteger {
-	NotReachable = 0,
-	ReachableViaWiFi,
-	ReachableViaWWAN
-} TT_NetworkStatus;
+    TTNotReachable = 0,
+    TTReachableViaWiFi,
+    TTReachableViaWWAN
+} TTNetworkStatus;
 
 #pragma mark IPv6 Support
 //Reachability fully support IPv6.  For full details, see ReadMe.md.
@@ -52,7 +52,7 @@ extern NSString *ktt_ReachabilityChangedNotification;
 - (BOOL)startNotifier;
 - (void)stopNotifier;
 
-- (TT_NetworkStatus)currentReachabilityStatus;
+- (TTNetworkStatus)currentReachabilityStatus;
 
 /*!
  * WWAN may be available, but not active until a connection has been established. WiFi may require a connection for VPN on Demand.

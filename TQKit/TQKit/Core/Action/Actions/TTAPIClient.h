@@ -29,6 +29,6 @@
 	ReachableViaWiFi,  //WIFI
 	ReachableViaWWAN   // 手机网络
  */
-@property (nonatomic, assign) TT_NetworkStatus netWorkStatus;
+@property (nonatomic, assign) TTNetworkStatus netWorkStatus;
 
 @end

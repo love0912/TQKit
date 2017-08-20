@@ -39,7 +39,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     // [self.requestSerializer setAuthorizationHeaderFieldWithUsername:@"XYZ" password:@"xyzzzz"];
     self.requestSerializer                         = [AFHTTPRequestSerializer serializer];
-//    self.responseSerializer                        = [AFJSONResponseSerializer serializer];
+    //    self.responseSerializer                        = [AFJSONResponseSerializer serializer];
     self.requestSerializer.timeoutInterval         = 30.0;
     self.reach = [TT_Reachability reachabilityWithHostName:AFAppDotNetAPIBaseURLString];
     //    self.securityPolicy = [self customSecurityPolicy];
@@ -49,21 +49,21 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
 #pragma mark - custom
 
 - (BOOL)isReachable {
-    TT_NetworkStatus status = [_reach currentReachabilityStatus];
+    TTNetworkStatus status = [_reach currentReachabilityStatus];
     BOOL isReachable = NO;
     switch (status)
     {
-        case NotReachable:
+        case TTNotReachable:
             isReachable = NO;
-            _netWorkStatus = NotReachable;
+            _netWorkStatus = TTNotReachable;
             break;
-        case ReachableViaWWAN:
+        case TTReachableViaWWAN:
             isReachable = YES;
-            _netWorkStatus = ReachableViaWWAN;
+            _netWorkStatus = TTReachableViaWWAN;
             break;
-        case ReachableViaWiFi:
+        case TTReachableViaWiFi:
             isReachable = YES;
-            _netWorkStatus = ReachableViaWiFi;
+            _netWorkStatus = TTReachableViaWiFi;
             break;
         default:
             break;
@@ -80,23 +80,23 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
 #pragma mark - private
 - (void)reachability:(TT_Reachability *)reachability
 {
-    TT_NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    TTNetworkStatus netStatus = [reachability currentReachabilityStatus];
     BOOL connectionRequired = [reachability connectionRequired];
     NSString* statusString = @"";
     switch (netStatus)
     {
-        case NotReachable:        {
+        case TTNotReachable:        {
             statusString = @"网络连接不可用";
             connectionRequired = NO;
             break;
         }
             
-        case ReachableViaWWAN:        {
+        case TTReachableViaWWAN:        {
             connectionRequired = YES;
             statusString = @"蜂窝移动网络";
             break;
         }
-        case ReachableViaWiFi:        {
+        case TTReachableViaWiFi:        {
             connectionRequired = YES;
             statusString= @"WIFI网络";
             break;
@@ -150,11 +150,11 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
     }
 }
 
-- (TT_NetworkStatus)netWorkStatus {
+- (TTNetworkStatus)netWorkStatus {
     BOOL b = [self isReachable];
     if (b) {
         return _netWorkStatus;
     }
-    return NotReachable;
+    return TTNotReachable;
 }
 @end

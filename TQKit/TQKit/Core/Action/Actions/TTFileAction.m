@@ -195,7 +195,7 @@
         }
     }];
     [self.downloadingTaskArray addObject:downloadTask];
-    if (_apiClient.netWorkStatus == ReachableViaWWAN) {
+    if (_apiClient.netWorkStatus == TTReachableViaWWAN) {
         [TTProgressHUD hideProgressHUD];
         [self showNetworkingWANDownloadTipByClick:^(NSInteger buttonIndex) {
             if (buttonIndex == 1) {
