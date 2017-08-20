@@ -21,11 +21,11 @@
 }
 
 - (void)tt_popToViewController:(NSString *)vcName {
-    [self tt_popToViewController:[self findViewController:vcName] animated:YES];
+    [self.navigationController popToViewController:[self findViewController:vcName] animated:YES];
 }
 
 - (void)tt_popToViewController:(NSString *)vcName animated:(BOOL)animated {
-    [self.navigationController tt_popToViewController:vcName animated:animated];
+    [self.navigationController popToViewController:[self findViewController:vcName] animated:animated];
 }
 
 - (void)tt_pushViewController:(UIViewController *)viewController {
