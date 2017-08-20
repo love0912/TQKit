@@ -49,7 +49,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
 #pragma mark - custom
 
 - (BOOL)isReachable {
-    NetworkStatus status = [_reach currentReachabilityStatus];
+    TT_NetworkStatus status = [_reach currentReachabilityStatus];
     BOOL isReachable = NO;
     switch (status)
     {
@@ -80,7 +80,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
 #pragma mark - private
 - (void)reachability:(TT_Reachability *)reachability
 {
-    NetworkStatus netStatus = [reachability currentReachabilityStatus];
+    TT_NetworkStatus netStatus = [reachability currentReachabilityStatus];
     BOOL connectionRequired = [reachability connectionRequired];
     NSString* statusString = @"";
     switch (netStatus)
@@ -141,7 +141,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
             _internetReachability = [TT_Reachability reachabilityForInternetConnection];
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(reachabilityChanged:)
-                                                         name:kReachabilityChangedNotification
+                                                         name:ktt_ReachabilityChangedNotification
                                                        object:nil];
         }
         [_internetReachability startNotifier];
@@ -150,7 +150,7 @@ static NSString * const AFAppDotNetAPIBaseURLString = @"www.qq.com";
     }
 }
 
-- (NetworkStatus)netWorkStatus {
+- (TT_NetworkStatus)netWorkStatus {
     BOOL b = [self isReachable];
     if (b) {
         return _netWorkStatus;
