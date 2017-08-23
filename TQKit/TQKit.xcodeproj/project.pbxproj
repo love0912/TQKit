@@ -140,6 +140,8 @@
 		11C0BEB41F050B38004FC175 /* TTQRCodeScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0BEB01F050B38004FC175 /* TTQRCodeScan.m */; };
 		11C0BEB51F050B38004FC175 /* TTScanBoxLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C0BEB11F050B38004FC175 /* TTScanBoxLine.h */; };
 		11C0BEB61F050B38004FC175 /* TTScanBoxLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C0BEB21F050B38004FC175 /* TTScanBoxLine.m */; };
+		11F57C381F4D338C0056E34F /* UILabel+TTExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F57C361F4D338C0056E34F /* UILabel+TTExt.h */; };
+		11F57C391F4D338C0056E34F /* UILabel+TTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F57C371F4D338C0056E34F /* UILabel+TTExt.m */; };
 		5217815662B12875C00B7D72 /* libPods-TQKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F219564B131C281410E0647 /* libPods-TQKit.a */; };
 /* End PBXBuildFile section */
 
@@ -279,6 +281,8 @@
 		11C0BEB01F050B38004FC175 /* TTQRCodeScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTQRCodeScan.m; sourceTree = "<group>"; };
 		11C0BEB11F050B38004FC175 /* TTScanBoxLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScanBoxLine.h; sourceTree = "<group>"; };
 		11C0BEB21F050B38004FC175 /* TTScanBoxLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScanBoxLine.m; sourceTree = "<group>"; };
+		11F57C361F4D338C0056E34F /* UILabel+TTExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TTExt.h"; sourceTree = "<group>"; };
+		11F57C371F4D338C0056E34F /* UILabel+TTExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TTExt.m"; sourceTree = "<group>"; };
 		2F219564B131C281410E0647 /* libPods-TQKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TQKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		323FE7B1215FD70A8097A948 /* Pods-TQKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TQKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TQKit/Pods-TQKit.release.xcconfig"; sourceTree = "<group>"; };
 		EBB453E85DC588FEC04266AB /* Pods-TQKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TQKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TQKit/Pods-TQKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -542,6 +546,7 @@
 				11B3DFF01ED41875007050B3 /* UITextView */,
 				11B3DFF31ED41875007050B3 /* UIView */,
 				115626D01F21E87B00D5A8E0 /* UIViewController */,
+				11F57C351F4D336E0056E34F /* UILabel */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -873,6 +878,15 @@
 			path = TTQRCodeScan;
 			sourceTree = "<group>";
 		};
+		11F57C351F4D336E0056E34F /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				11F57C361F4D338C0056E34F /* UILabel+TTExt.h */,
+				11F57C371F4D338C0056E34F /* UILabel+TTExt.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		6812DCCE510A14CDD6E25465 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -946,6 +960,7 @@
 				11B3E0571ED41875007050B3 /* NSTimer+TTExt.h in Headers */,
 				11B3E0621ED41875007050B3 /* UIBarButtonItem+TTExt.h in Headers */,
 				11B3E09A1ED41875007050B3 /* TT_Define_App.h in Headers */,
+				11F57C381F4D338C0056E34F /* UILabel+TTExt.h in Headers */,
 				11C0BEB51F050B38004FC175 /* TTScanBoxLine.h in Headers */,
 				11B3E04B1ED41875007050B3 /* NSDictionary+TTExt.h in Headers */,
 				11B3E04D1ED41875007050B3 /* NSDictionary+TTExt2UrlParam.h in Headers */,
@@ -1103,6 +1118,7 @@
 				119369581F09E449003285E2 /* NSDate+TTExt2InternetDate.m in Sources */,
 				11B3E05D1ED41875007050B3 /* CALayer+TTExt.m in Sources */,
 				118A68271EE7838300DFCC13 /* NSData+TTExt.m in Sources */,
+				11F57C391F4D338C0056E34F /* UILabel+TTExt.m in Sources */,
 				117335C31F01F574003919D3 /* AFURLSessionManager+TTDownload.m in Sources */,
 				11B3E0541ED41875007050B3 /* NSString+TTExt.m in Sources */,
 				11B3E0751ED41875007050B3 /* UIGestureRecognizer+TTExt.m in Sources */,
